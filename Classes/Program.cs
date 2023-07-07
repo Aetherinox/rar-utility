@@ -23,7 +23,6 @@ namespace WinrarKG
                  @note      Not needed for the WinRAR keygen. No need to write to any host file.
             */
 
-            /*
             WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
             bool administrativeMode = principal.IsInRole(WindowsBuiltInRole.Administrator);
 
@@ -42,7 +41,6 @@ namespace WinrarKG
                 }
                 return;
             }
-            */
 
             Application.Run(new FormParent());
 
