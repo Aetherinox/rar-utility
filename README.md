@@ -55,6 +55,21 @@ This file holds default values that the app uses when launching. You shouldn't n
 
 Don't modify these unless you know what you're doing, improperly configured, the Activation and Response will not generate into a valid serial key.
 
+# Virus Scans
+
+Unfortunately, virus scanners such as VirusTotal can report false positives. There's not much control I have over that. These websites will also attempt to detect keygens; sometimes you can get by it, and sometimes you can't.
+
+Since this is a keygen, VirusTotal did indeed pick up on that and rated my script +4. You can review the results below. However, if you review the source code; obviously there's nothing at all which represents malware or a virus.
+
+The only option I'd have is to contact these websites and tell them that it's a false positive, but I'm writing a keygen; I highly doubt they're going to be happy with doing anything.
+
+I scanned with Windows Defender and it reported that the files are clean.
+
+- [VirusTotal](https://www.virustotal.com/gui/file/94bd0beb649a84f3dd50d8d8834e5aea0da9663cf369c7f839427f7cd1dd602f)
+- [Jotti](https://virusscan.jotti.org/en-US/filescanjob/p7stox2f6a)
+- [Dr. Web](https://online192.drweb.com/cache/?i=0b3ede4a0d42db9150892d6bee847bbb)
+- [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMDcwOFd1NHc4VDNscktENVk3WS1PamE/regular/overview)
+
 # Previews
 
 ![Main screen](https://i.imgur.com/3hrolF6.png)
