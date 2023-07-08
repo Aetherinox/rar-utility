@@ -149,7 +149,7 @@ namespace WinrarKG
             this.txt_Terms.BorderSize = 1;
             this.txt_Terms.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Terms.ForeColor = System.Drawing.Color.White;
-            this.txt_Terms.Location = new System.Drawing.Point(17, 128);
+            this.txt_Terms.Location = new System.Drawing.Point(15, 128);
             this.txt_Terms.Margin = new System.Windows.Forms.Padding(0);
             this.txt_Terms.Multiline = true;
             this.txt_Terms.Name = "txt_Terms";
@@ -158,7 +158,7 @@ namespace WinrarKG
             this.txt_Terms.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_Terms.PlaceholderText = "";
             this.txt_Terms.ReadOnly = true;
-            this.txt_Terms.Size = new System.Drawing.Size(480, 256);
+            this.txt_Terms.Size = new System.Drawing.Size(487, 257);
             this.txt_Terms.TabIndex = 3;
             this.txt_Terms.UnderlineStyle = false;
             this.txt_Terms.Value = "";
