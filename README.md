@@ -9,9 +9,10 @@ Developed under the following conditions:
 - C# language
 
 # Usage
-If you wish to simply use the keygen, head over to the [Releases](https://github.com/Aetherinox/WinrarKeygen/releases) section and download the latest binary as a `zip` or `rar`. The binary release should only contain two files:
+If you wish to simply use the keygen, head over to the [Releases](https://github.com/Aetherinox/WinrarKeygen/releases) section and download the latest binary as a `zip` or `rar`. The binary release should only contain two files and folder:
 - /bin/`WinrarKG.exe`
 - /bin/`WinrarKG.exe.config`
+- /bin/library/`winrarkg_cli.exe`
 
 Make sure these two files are both in the same folder.
 
