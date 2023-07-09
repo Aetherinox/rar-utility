@@ -31,7 +31,7 @@ If you're looking to do a quick credits swap and re-distribute just so you can m
 
 # Signed Releases
 
-As of `v1.0.0.0` and onwards, binaries are GPG signed with the key `90B445D4C960D301`. You can find the key available on most keyservers:
+As of `v1.0.0.0` and onwards, binaries are GPG signed with the key `CB5C4C30CD0D4028`. You can find the key available on most keyservers:
 
 - [pgp.mit.edu](https://pgp.mit.edu/)
 - [keyserver.ubuntu.com](keyserver.ubuntu.com)
