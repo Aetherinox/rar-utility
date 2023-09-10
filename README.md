@@ -2,6 +2,12 @@
 
 Allows you to generate and activate a copy of [WinRAR v6.22+](https://win-rar.com).
 
+<br />
+
+---
+
+<br />
+
 # About
 
 Developer holds no responsibility with what people decide to do with this app. It was developed strictly for demonstration purposes only.
@@ -10,6 +16,12 @@ Developed under the following conditions:
 - Visual Studio 2022 (17.6.4)
 - v4.8.0 .NET Framework
 - C# language
+
+<br />
+
+---
+
+<br />
 
 # Usage
 
@@ -21,6 +33,12 @@ If you wish to simply use the keygen, head over to the [Releases](https://github
 
 Make sure these two files are both in the same folder.
 
+<br />
+
+---
+
+<br />
+
 # Build
 
 Download the source files and launch the `.csproj` project file in Visual Studio.
@@ -28,6 +46,12 @@ Download the source files and launch the `.csproj` project file in Visual Studio
 If you decide to modify or re-build my code, you are to not re-distribute. Unlike a lot of keygens, my files are free of malware, and I do not want people taking advantage of a quick solution that you can dump your non-sense malware into and re-distribute.
 
 If you're looking to do a quick credits swap and re-distribute just so you can make a name for yourself; I'd highly recommend you actually learn C# and make something yourself.
+
+<br />
+
+---
+
+<br />
 
 # Signed Releases
 
@@ -38,6 +62,12 @@ As of `v1.0.0.0` and onwards, binaries are GPG signed with the key `CB5C4C30CD0D
 - [keys.openpgp.org](https://keys.openpgp.org)
 
 Binaries are also signed with a certificate which has the serial number `10d43e641e59fa884c773add600159dd`. If you downloaded this elsewhere on the internet and the binary is not signed with that certificate serial number; **IT IS NOT MINE**. You should delete it.
+
+<br />
+
+---
+
+<br />
 
 # App.config
 
@@ -55,6 +85,12 @@ This file holds default values that the app uses when launching. You shouldn't n
 
 Don't modify these unless you know what you're doing, improperly configured, the Activation and Response will not generate into a valid serial key.
 
+<br />
+
+---
+
+<br />
+
 # Virus Scans
 
 Unfortunately, virus scanners such as VirusTotal can report false positives. There's not much control I have over that. These websites will also attempt to detect keygens; sometimes you can get by it, and sometimes you can't.
@@ -69,6 +105,12 @@ I scanned with Windows Defender and it reported that the files are clean.
 - [Jotti](https://virusscan.jotti.org/en-US/filescanjob/p7stox2f6a)
 - [Dr. Web](https://online192.drweb.com/cache/?i=0b3ede4a0d42db9150892d6bee847bbb)
 - [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMDcwOFd1NHc4VDNscktENVk3WS1PamE/regular/overview)
+
+<br />
+
+---
+
+<br />
 
 # Previews
 
