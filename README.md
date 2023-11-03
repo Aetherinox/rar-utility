@@ -1,6 +1,17 @@
-# WinRAR License Generator
+<p align="center"><img src="https://www.nfefiscal.com.br/images/winrar.png" width="860"></p>
+<h1 align="center"><b>WinRAR License Generator</b></h1>
 
-Allows you to generate and activate a copy of [WinRAR v6.22+](https://win-rar.com).
+<div align="center">
+
+![Version](https://img.shields.io/github/v/tag/Aetherinox/WinrarKeygen?logo=GitHub&label=version&color=ba5225) ![Downloads](https://img.shields.io/github/downloads/Aetherinox/WinrarKeygen/total) ![Repo Size](https://img.shields.io/github/repo-size/Aetherinox/WinrarKeygen?label=size&color=59702a) ![Last Commit)](https://img.shields.io/github/last-commit/Aetherinox/WinrarKeygen?color=b43bcc)
+
+</div>
+
+---
+
+<br />
+
+Allows you to generate and activate a copy of [WinRAR v6.x and 7.x](https://win-rar.com).
 
 <br />
 
@@ -13,9 +24,15 @@ Allows you to generate and activate a copy of [WinRAR v6.22+](https://win-rar.co
 Developer holds no responsibility with what people decide to do with this app. It was developed strictly for demonstration purposes only.
 Developed under the following conditions:
 
-- Visual Studio 2022 (17.6.4)
+- Visual Studio 2022 (17.6.5)
 - v4.8.0 .NET Framework
 - C# language
+
+<br />
+
+This generator has been developed to work on the following versions:
+- WinRAR 6.x
+- WinRAR 7.x
 
 <br />
 
@@ -25,13 +42,9 @@ Developed under the following conditions:
 
 # Usage
 
-If you wish to simply use the keygen, head over to the [Releases](https://github.com/Aetherinox/WinrarKeygen/releases) section and download the latest binary as a `zip` or `rar`. The binary release should only contain three files:
+If you wish to simply use the keygen, head over to the [Releases](https://github.com/Aetherinox/WinrarKeygen/releases) section and download the latest binary as a `zip` or `rar`. The download is a single `exe`.
 
 - `WinrarKG.exe`
-- `WinrarKG.exe.config`
-- /library/`winrarkg_cli.exe`
-
-Make sure these two files are both in the same folder.
 
 <br />
 
@@ -69,42 +82,19 @@ Binaries are also signed with a certificate which has the serial number `10d43e6
 
 <br />
 
-# App.config
-
-This file holds default values that the app uses when launching. You shouldn't need to modify these, but they're provided just in case:
-
-```xml
-  <appSettings>
-    <add key="username_default" value="Aetherinox"/>
-    <add key="company_default" value="Unlimited Business License"/>
-    <add key="libs_default" value="library"/>
-    <add key="github_url" value="https://github.com/Aetherinox/WinrarKeygen"/>
-    <add key="ClientSettingsProvider.ServiceUri" value=""/>
-  </appSettings>
-```
-
-Don't modify these unless you know what you're doing, improperly configured, the Activation and Response will not generate into a valid serial key.
-
-<br />
-
----
-
-<br />
-
 # Virus Scans
 
 Unfortunately, virus scanners such as VirusTotal can report false positives. There's not much control I have over that. These websites will also attempt to detect keygens; sometimes you can get by it, and sometimes you can't.
 
-Since this is a keygen, VirusTotal did indeed pick up on that and rated my script +4. You can review the results below. However, if you review the source code; obviously there's nothing at all which represents malware or a virus.
+Since this is a keygen, VirusTotal did indeed pick up on that and rated my script +2. Between versions 1.0 and 1.1, I've managed to remove some false positives, but Malwarebytes is still yelling about it being "fishy". You can review the results below. However, if you review the source code; obviously there's nothing at all which represents malware or a virus.
 
 The only option I'd have is to contact these websites and tell them that it's a false positive, but I'm writing a keygen; I highly doubt they're going to be happy with doing anything.
 
 I scanned with Windows Defender and it reported that the files are clean.
 
-- [VirusTotal](https://www.virustotal.com/gui/file/94bd0beb649a84f3dd50d8d8834e5aea0da9663cf369c7f839427f7cd1dd602f)
-- [Jotti](https://virusscan.jotti.org/en-US/filescanjob/p7stox2f6a)
-- [Dr. Web](https://online192.drweb.com/cache/?i=0b3ede4a0d42db9150892d6bee847bbb)
-- [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMDcwOFd1NHc4VDNscktENVk3WS1PamE/regular/overview)
+- [VirusTotal](https://virustotal.com/gui/file/e33720fc9780dd54fd8a0ecd1ac7918c2cbbddd4496cfc759bda9641c1809c1c?nocache=1)
+- [Jotti](https://virusscan.jotti.org/en-US/filescanjob/23j4l5ftc9)
+- [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMTEwM3NoWldkMjl4S2lOd1R0ODlQUFU/regular/overview)
 
 <br />
 
