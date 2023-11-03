@@ -22,5 +22,77 @@ namespace WinrarKG.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Aetherinox")]
+        public string app_def_name {
+            get {
+                return ((string)(this["app_def_name"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("70575bdfb02b3f1b45a37431bef9a8c9933a4ace")]
+        public string app_dev_piv_thumbprint {
+            get {
+                return ((string)(this["app_dev_piv_thumbprint"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CB5C4C30CD0D4028")]
+        public string app_dev_gpg_keyid {
+            get {
+                return ((string)(this["app_dev_gpg_keyid"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/Aetherinox/WinrarKeygen")]
+        public string app_url_github {
+            get {
+                return ((string)(this["app_url_github"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://thepiratebay.org/search.php?q=user:Aetherinox")]
+        public string app_url_tpb {
+            get {
+                return ((string)(this["app_url_tpb"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Unlimited Business License")]
+        public string app_def_license {
+            get {
+                return ((string)(this["app_def_license"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("library")]
+        public string app_def_library {
+            get {
+                return ((string)(this["app_def_library"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("winrarkg_cli.exe")]
+        public string app_def_exe {
+            get {
+                return ((string)(this["app_def_exe"]));
+            }
+        }
     }
 }

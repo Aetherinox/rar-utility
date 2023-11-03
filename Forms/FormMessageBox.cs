@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Lng = WinrarKG.Properties.Resources;
+using Cfg = WinrarKG.Properties.Settings;
 
 namespace WinrarKG.Msgbox
 {
@@ -137,7 +134,7 @@ namespace WinrarKG.Msgbox
                 case MessageBoxButtons.OK:
                     button1.Visible = true;
                     button1.Location = new Point(xCenter, yCenter);
-                    button1.Text = "&OK";
+                    button1.Text = Lng.template_btn_ok;
                     button1.DialogResult = DialogResult.OK;
 
                     SetDefaultButton(btnDefault);
@@ -151,12 +148,12 @@ namespace WinrarKG.Msgbox
 
                     button1.Visible = true;
                     button1.Location = new Point(xCenter - (button1.Width / 2) - 5, yCenter);
-                    button1.Text = "&OK";
+                    button1.Text = Lng.template_btn_ok;
                     button1.DialogResult = DialogResult.OK;
 
                     button2.Visible = true;
                     button2.Location = new Point(xCenter + (button2.Width / 2) + 5, yCenter);
-                    button2.Text = "&Cancel";
+                    button2.Text = Lng.template_btn_cancel;
                     button2.DialogResult = DialogResult.Cancel;
                     button2.BackColor = Color.DimGray;
 
@@ -173,12 +170,12 @@ namespace WinrarKG.Msgbox
                 case MessageBoxButtons.RetryCancel:
                     button1.Visible = true;
                     button1.Location = new Point(xCenter - (button1.Width / 2) - 5, yCenter);
-                    button1.Text = "&Retry";
+                    button1.Text = Lng.template_btn_retry;
                     button1.DialogResult = DialogResult.Retry;
 
                     button2.Visible = true;
                     button2.Location = new Point(xCenter + (button2.Width / 2) + 5, yCenter);
-                    button2.Text = "&Cancel";
+                    button2.Text = Lng.template_btn_cancel;
                     button2.DialogResult = DialogResult.Cancel;
                     button2.BackColor = Color.DimGray;
 
@@ -195,12 +192,12 @@ namespace WinrarKG.Msgbox
                 case MessageBoxButtons.YesNo:
                     button1.Visible = true;
                     button1.Location = new Point(xCenter - (button1.Width / 2) - 5, yCenter);
-                    button1.Text = "&Yes";
+                    button1.Text = Lng.template_btn_yes;
                     button1.DialogResult = DialogResult.Yes;
 
                     button2.Visible = true;
                     button2.Location = new Point(xCenter + (button2.Width / 2) + 5, yCenter);
-                    button2.Text = "&No";
+                    button2.Text = Lng.template_btn_no;
                     button2.DialogResult = DialogResult.No;
                     button2.BackColor = Color.IndianRed;
 
@@ -217,18 +214,18 @@ namespace WinrarKG.Msgbox
                 case MessageBoxButtons.YesNoCancel:
                     button1.Visible = true;
                     button1.Location = new Point(xCenter - button1.Width - 5, yCenter);
-                    button1.Text = "&Yes";
+                    button1.Text = Lng.template_btn_yes;
                     button1.DialogResult = DialogResult.Yes;
 
                     button2.Visible = true;
                     button2.Location = new Point(xCenter, yCenter);
-                    button2.Text = "&No";
+                    button2.Text = Lng.template_btn_no;
                     button2.DialogResult = DialogResult.No;
                     button2.BackColor = Color.IndianRed;
 
                     button3.Visible = true;
                     button3.Location = new Point(xCenter + button2.Width + 5, yCenter);
-                    button3.Text = "&Cancel";
+                    button3.Text = Lng.template_btn_cancel;
                     button3.DialogResult = DialogResult.Cancel;
                     button3.BackColor = Color.DimGray;
 
@@ -242,18 +239,18 @@ namespace WinrarKG.Msgbox
                 case MessageBoxButtons.AbortRetryIgnore:
                     button1.Visible = true;
                     button1.Location = new Point(xCenter - button1.Width - 5, yCenter);
-                    button1.Text = "&Abort";
+                    button1.Text = Lng.template_btn_abort;
                     button1.DialogResult = DialogResult.Abort;
                     button1.BackColor = Color.Goldenrod;
 
                     button2.Visible = true;
                     button2.Location = new Point(xCenter, yCenter);
-                    button2.Text = "&Retry";
+                    button2.Text = Lng.template_btn_retry;
                     button2.DialogResult = DialogResult.Retry;
 
                     button3.Visible = true;
                     button3.Location = new Point(xCenter + button2.Width + 5, yCenter);
-                    button3.Text = "&Ignore";
+                    button3.Text = Lng.template_btn_ignore;
                     button3.DialogResult = DialogResult.Ignore;
                     button3.BackColor = Color.IndianRed;
 

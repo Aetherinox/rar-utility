@@ -5,6 +5,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Reflection;
+using Lng = WinrarKG.Properties.Resources;
+using Cfg = WinrarKG.Properties.Settings;
 
 namespace WinrarKG
 {
@@ -50,8 +52,18 @@ INSTRUCTIONS
             txt_Version.Text    = "v" + ver + " by " + tm;
             lbl_Product.Text    = product;
 
-            txt_Terms.Value = GetReadme(product, ver, tm);
-            txt_Terms.Text = GetReadme(product, ver, tm);
+            txt_Terms.Value     = GetReadme(product, ver, tm);
+            txt_Terms.Text      = GetReadme(product, ver, tm);
+
+            lbl_Edu.Text        = Lng.about_hdr_desc;
+            lnk_TPBLink.Text    = Lng.about_lnk_tpb;
+            lnk_Github.Text     = Lng.about_lnk_github;
+
+            lbl_Dev_PIV_Thumbprint.Text         = Lng.about_lbl_thumbprint;
+            lbl_Dev_GPG_KeyID.Text              = Lng.about_lbl_gpg;
+
+            txt_Dev_PIV_Thumbprint.Value        = Cfg.Default.app_dev_piv_thumbprint;
+            txt_Dev_GPG_KeyID.Value             = Cfg.Default.app_dev_gpg_keyid;
         }
 
         private void FormAbout_Load(object sender, EventArgs e)
@@ -126,6 +138,10 @@ INSTRUCTIONS
             closeBtn.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
+        /*
+            Window > Button > Label > Click
+        */
+
         private void lbl_Serial_Click(object sender, EventArgs e)
         {
 
@@ -146,7 +162,7 @@ INSTRUCTIONS
 
         private void llblLink_TPB_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://thepiratebay.org/search.php?q=user:Aetherinox");
+            System.Diagnostics.Process.Start(Cfg.Default.app_url_tpb);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -166,8 +182,7 @@ INSTRUCTIONS
 
         private void lnk_Github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string github_url = ConfigurationManager.AppSettings["github_url"];
-            System.Diagnostics.Process.Start(github_url);
+            System.Diagnostics.Process.Start(Cfg.Default.app_url_github);
         }
 
         private void txt_Terms__TextChanged(object sender, EventArgs e)

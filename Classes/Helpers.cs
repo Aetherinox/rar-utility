@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Collections.ObjectModel;
 using System.Management.Automation;
+using System.ComponentModel;
 
 [AttributeUsage(AttributeTargets.Assembly)]
 internal class BuildDateAttribute : Attribute

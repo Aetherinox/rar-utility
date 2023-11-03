@@ -1,15 +1,12 @@
 ﻿using WinrarKG;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
-using System.Collections.ObjectModel;
-using System.Windows;
+using Lng = WinrarKG.Properties.Resources;
+using Cfg = WinrarKG.Properties.Settings;
 using static WinrarKG.FormParent;
 
 namespace WinrarKG
@@ -25,13 +22,17 @@ namespace WinrarKG
         private Helpers Helpers = new Helpers();
 
         /*
-            Variables
+            variables > resource (cli exe)
         */
 
-        static private string lib_path = ConfigurationManager.AppSettings["libs_default"];
-        static private string app_loc = AppDomain.CurrentDomain.BaseDirectory + "\\" + lib_path + "\\winrarkg_cli.exe";
-        static private string ps_cmd = "& \"" + app_loc + "\"";
- 
+        static private string app_exe = Cfg.Default.app_def_exe;
+        static private string app_loc = AppDomain.CurrentDomain.BaseDirectory + "\\" + app_exe;
+        readonly private string app_cli = "& \"" + app_loc + "\"";
+
+        /*
+            variables > query
+        */
+
         private string query_result;
         private string query_arg_name;
         private string query_arg_company;
@@ -43,29 +44,20 @@ namespace WinrarKG
         public FormParent()
         {
             InitializeComponent();
-            this.statusStrip.Renderer = new StatusBar_Renderer();
+            this.statusStrip.Renderer       = new StatusBar_Renderer();
 
-            string product = AppInfo.Title;
-            lblTitle.Text = product;
+            string product                  = AppInfo.Title;
+            lblTitle.Text                   = product;
 
-            this.txt_User.PlaceholderText = ConfigurationManager.AppSettings["username_default"];
-            this.txt_Company.PlaceholderText = ConfigurationManager.AppSettings["company_default"];
+            lbl_User.Text                   = Lng.lbl_generate_name;
+            txt_User.PlaceholderText        = Cfg.Default.app_def_name;
 
-            if (!File.Exists(app_loc))
-            {
+            txt_Company.Text                = Lng.lbl_generate_name;
+            txt_Company.PlaceholderText     = Cfg.Default.app_def_license;
 
-                MessageBox.Show(
-                    "Cannot locate a required library file:\n" + app_loc + "\n\nAdd the missing library file and restart the program.",
-                    "Fatal Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-
-                toolStripStatusLabel1.Text = string.Format("Fatal Error: Can't find " + app_loc);
-                statusStrip.Refresh();
-
-            }
-
+            btnGenerate.Text                = Lng.btn_generate;
+            btnCopy.Text                    = Lng.btn_generate_copy;
+            btnSave.Text                    = Lng.btn_savekeyfile;
         }
 
         /*
@@ -75,7 +67,7 @@ namespace WinrarKG
         private void FormParent_Load(object sender, EventArgs e)
         {
             mnuTop.Renderer = new ToolStripProfessionalRenderer(new mnuTop_ColorTable());
-            toolStripStatusLabel1.Text = string.Format("Press Generate to create license key ...");
+            toolStripStatusLabel1.Text = string.Format(Lng.statusbar_generate);
             statusStrip.Refresh();
         }
 
@@ -142,8 +134,8 @@ namespace WinrarKG
             if (string.IsNullOrEmpty(txt_User.Value))
             {
                 MessageBox.Show(
-                    "Type a name before you attempt to generate a license key",
-                    "No name specified",
+                    Lng.msgbox_noname_msg,
+                    Lng.msgbox_noname_title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
@@ -170,7 +162,7 @@ namespace WinrarKG
 
                 if (string.IsNullOrEmpty(query_arg_company))
                 {
-                    string v_def_company = ConfigurationManager.AppSettings["company_default"];
+                    string v_def_company = Cfg.Default.app_def_license;
                     query_arg_company = v_def_company;
                 }
 
@@ -187,18 +179,18 @@ namespace WinrarKG
 
 #if DEBUG
                     System.Windows.Forms.MessageBox.Show(
-                        ps_cmd + " " + query_arg_name + " " + query_arg_company,
+                        app_cli + " " + query_arg_name + " " + query_arg_company,
                         "Sending To CLI:",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
 #endif
 
-                query_result = Serial.Generate(ps_cmd + " " + query_arg_name + " " + query_arg_company);
+                query_result = Serial.Generate(app_cli + " " + query_arg_name + " " + query_arg_company);
 
                 txt_LicenseKey.Value = query_result;
 
-                toolStripStatusLabel1.Text = string.Format("License key generated. Paste into WinRAR app.");
+                toolStripStatusLabel1.Text = string.Format(Lng.statusbar_generated);
                 statusStrip.Refresh();
             }
         }
@@ -213,7 +205,7 @@ namespace WinrarKG
 
             if (string.IsNullOrEmpty(txt_LicenseKey.Value))
             {
-                toolStripStatusLabel1.Text = string.Format("Generate license key first");
+                toolStripStatusLabel1.Text = string.Format(Lng.statusbar_generate_first);
                 statusStrip.Refresh();
             }
             else
@@ -221,7 +213,7 @@ namespace WinrarKG
                 Clipboard.SetText(txt_LicenseKey.Value);
 
                 toolStripStatusLabel1.Text = string.Format(
-                    "License key copied. Paste into rarreg.key"
+                    Lng.statusbar_license_copied
                 );
                 statusStrip.Refresh();
             }
@@ -445,7 +437,7 @@ namespace WinrarKG
                     SaveFileDialog dlg = new SaveFileDialog();
 
                     dlg.FileName = "rarreg";
-                    dlg.Title = "Save WinRAR License Key";
+                    dlg.Title = Lng.dlg_save_title;
                     dlg.CheckPathExists = true;
                     dlg.InitialDirectory = path_winrar;
                     dlg.DefaultExt = "key";
@@ -461,17 +453,14 @@ namespace WinrarKG
                             }
 
                             MessageBox.Show(
-                                "Successfully saved rarreg.key.\nRestart WinRAR for license to apply.",
-                                "Keygen Installed Successfully",
+                                Lng.msgbox_save_msg,
+                                Lng.msgbox_save_title,
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.None
                             );
 
                             string file_path = dlg.FileName;
-                            toolStripStatusLabel1.Text = string.Format(
-                                "Saved license key to " + file_path
-                            );
-
+                            toolStripStatusLabel1.Text = string.Format(Lng.statusbar_license_saved, file_path);
                             statusStrip.Refresh();
                         }
                     }
@@ -486,8 +475,8 @@ namespace WinrarKG
                         */
 
                         MessageBox.Show(
-                            "Keygen cannot determine where WinRAR is installed.\n\nCopy the generated key and place it inside a file labeled rarreg.key.\n\nThen place the file in your WinRAR folder.",
-                            "Cannot find WinRAR",
+                            Lng.msgbox_nolocnopath_msg,
+                            Lng.msgbox_nolocnopath_title,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error
                         );
@@ -500,8 +489,8 @@ namespace WinrarKG
                         */
 
                         MessageBox.Show(
-                            "Keygen cannot determine where WinRAR is installed\nTried looking in " + path_winrar + ".\n\nCopy the generated key and place it inside a file labeled rarreg.key\n\nThen place the file in your WinRAR folder.",
-                            "Cannot find WinRAR",
+                            string.Format(Lng.msgbox_nolocpath_msg, path_winrar),
+                            Lng.msgbox_nolocpath_title,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error
                         );
@@ -511,8 +500,8 @@ namespace WinrarKG
             else
             {
                 MessageBox.Show(
-                    "Can't save an empty WinRAR keyfile.\n\nEnter a valid name & company / license name; then click \"Generate\"",
-                    "No Generated Response",
+                    Lng.msgbox_licempty_msg,
+                    Lng.msgbox_licempty_title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );

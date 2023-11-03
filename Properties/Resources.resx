@@ -117,9 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="about_hdr_desc" xml:space="preserve">
+    <value>Educational purposes only. No ads, no music, no bullshit.</value>
+    <comment>F:About &gt;Header Description</comment>
+  </data>
+  <data name="about_lbl_gpg" xml:space="preserve">
+    <value>GPG KeyID</value>
+    <comment>F:About &gt;GPG ID Label</comment>
+  </data>
+  <data name="about_lbl_thumbprint" xml:space="preserve">
+    <value>Digital Signature Thumbprint</value>
+    <comment>F:About &gt;PIV ID Label</comment>
+  </data>
+  <data name="about_lnk_github" xml:space="preserve">
+    <value>Github Repo</value>
+    <comment>F:About &gt;Link &gt; Github</comment>
+  </data>
+  <data name="about_lnk_tpb" xml:space="preserve">
+    <value>TPB Profile</value>
+    <comment>F:About &gt;Link &gt; TPB</comment>
+  </data>
+  <data name="btn_generate" xml:space="preserve">
+    <value>&amp;Generate</value>
+    <comment>F:Parent &gt; Save Keyfile</comment>
+  </data>
+  <data name="btn_generate_copy" xml:space="preserve">
+    <value>&amp;Copy</value>
+    <comment>F:Parent &gt; Save Keyfile</comment>
+  </data>
+  <data name="btn_savekeyfile" xml:space="preserve">
+    <value>&amp;Save Keyfile</value>
+    <comment>F:Parent &gt; Save Keyfile</comment>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Materials\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dlg_save_title" xml:space="preserve">
+    <value>Save WinRAR License Key</value>
   </data>
   <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Materials\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,7 +165,111 @@
   <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Materials\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lbl_generate_license" xml:space="preserve">
+    <value>Generated License Key</value>
+    <comment>F:Parent &gt; Generated Label</comment>
+  </data>
+  <data name="lbl_generate_name" xml:space="preserve">
+    <value>Name</value>
+    <comment>F:Parent &gt; Name Label</comment>
+  </data>
+  <data name="msgbox_err_libmissing_msg" xml:space="preserve">
+    <value>Cannot locate a required library file:{0}{1}{2}{3}Add the missing library file and restart the program.</value>
+  </data>
+  <data name="msgbox_err_libmissing_title" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="msgbox_licempty_msg" xml:space="preserve">
+    <value>Can't save an empty WinRAR keyfile.
+
+Enter a valid name &amp; company / license name; then click "Generate"</value>
+  </data>
+  <data name="msgbox_licempty_title" xml:space="preserve">
+    <value>No Generated Response</value>
+  </data>
+  <data name="msgbox_nolocnopath_msg" xml:space="preserve">
+    <value>Keygen cannot determine where WinRAR is installed.
+
+Copy the generated key and place it inside a file labeled rarreg.key.
+
+Then place the file in your WinRAR folder.</value>
+  </data>
+  <data name="msgbox_nolocnopath_title" xml:space="preserve">
+    <value>Cannot Find WinRAR</value>
+  </data>
+  <data name="msgbox_nolocpath_msg" xml:space="preserve">
+    <value>Keygen cannot determine where WinRAR is installed
+Tried looking in {0}.
+
+Copy the generated key and place it inside a file labeled rarreg.key
+
+Then place the file in your WinRAR folder.</value>
+  </data>
+  <data name="msgbox_nolocpath_title" xml:space="preserve">
+    <value>Cannot Locate WinRAR</value>
+  </data>
+  <data name="msgbox_noname_msg" xml:space="preserve">
+    <value>Type a name before you attempt to generate a license key</value>
+  </data>
+  <data name="msgbox_noname_title" xml:space="preserve">
+    <value>No name specified</value>
+  </data>
+  <data name="msgbox_save_msg" xml:space="preserve">
+    <value>Successfully saved rarreg.key.\nRestart WinRAR for license to apply.</value>
+  </data>
+  <data name="msgbox_save_title" xml:space="preserve">
+    <value>Keygen Installed Successfully</value>
+  </data>
   <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Materials\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statusbar_generate" xml:space="preserve">
+    <value>Press Generate to create license key ...</value>
+  </data>
+  <data name="statusbar_generated" xml:space="preserve">
+    <value>License key generated. Paste into WinRAR directory.</value>
+  </data>
+  <data name="statusbar_generate_first" xml:space="preserve">
+    <value>Generate license key first</value>
+  </data>
+  <data name="statusbar_libmissing" xml:space="preserve">
+    <value>Fatal Error: Can't find {0}</value>
+  </data>
+  <data name="statusbar_license_copied" xml:space="preserve">
+    <value>License key copied. Paste into rarreg.key</value>
+  </data>
+  <data name="statusbar_license_saved" xml:space="preserve">
+    <value>Saved license key to {0}</value>
+  </data>
+  <data name="template_btn_abort" xml:space="preserve">
+    <value>&amp;Abort</value>
+    <comment>Dialog &gt; Button &gt; Abort</comment>
+  </data>
+  <data name="template_btn_cancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+    <comment>Dialog &gt; Button &gt; Cancel</comment>
+  </data>
+  <data name="template_btn_ignore" xml:space="preserve">
+    <value>&amp;Ignore</value>
+    <comment>Dialog &gt; Button &gt; Ignore</comment>
+  </data>
+  <data name="template_btn_no" xml:space="preserve">
+    <value>&amp;No</value>
+    <comment>Dialog &gt; Button &gt; No</comment>
+  </data>
+  <data name="template_btn_ok" xml:space="preserve">
+    <value>&amp;OK</value>
+    <comment>Dialog &gt; Button &gt; OK</comment>
+  </data>
+  <data name="template_btn_retry" xml:space="preserve">
+    <value>&amp;Retry</value>
+    <comment>Dialog &gt; Button &gt; Retry</comment>
+  </data>
+  <data name="template_btn_yes" xml:space="preserve">
+    <value>&amp;Yes</value>
+    <comment>Dialog &gt; Button &gt; Yes</comment>
+  </data>
+  <data name="winrarkg_cli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\winrarkg_cli.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

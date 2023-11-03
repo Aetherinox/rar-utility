@@ -34,12 +34,12 @@ namespace WinrarKG.Msgbox
             this.labelCaption = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
-            this.panelBody = new System.Windows.Forms.Panel();
-            this.labelMessage = new System.Windows.Forms.Label();
-            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.button3 = new WinrarKG.AetherxButton();
             this.button2 = new WinrarKG.AetherxButton();
             this.button1 = new WinrarKG.AetherxButton();
+            this.panelBody = new System.Windows.Forms.Panel();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.panelTitleBar.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -52,10 +52,9 @@ namespace WinrarKG.Msgbox
             this.panelTitleBar.Controls.Add(this.labelCaption);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(3, 2);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTitleBar.Location = new System.Drawing.Point(2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(461, 31);
+            this.panelTitleBar.Size = new System.Drawing.Size(346, 25);
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -64,8 +63,7 @@ namespace WinrarKG.Msgbox
             this.labelCaption.AutoSize = true;
             this.labelCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaption.ForeColor = System.Drawing.Color.White;
-            this.labelCaption.Location = new System.Drawing.Point(12, 4);
-            this.labelCaption.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCaption.Location = new System.Drawing.Point(9, 3);
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(86, 17);
             this.labelCaption.TabIndex = 4;
@@ -80,11 +78,10 @@ namespace WinrarKG.Msgbox
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(421, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(316, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.btnClose.Size = new System.Drawing.Size(40, 31);
+            this.btnClose.Size = new System.Drawing.Size(30, 25);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -97,55 +94,11 @@ namespace WinrarKG.Msgbox
             this.panelButtons.Controls.Add(this.button2);
             this.panelButtons.Controls.Add(this.button1);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtons.Location = new System.Drawing.Point(3, 109);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(4);
+            this.panelButtons.Location = new System.Drawing.Point(2, 88);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(461, 74);
+            this.panelButtons.Size = new System.Drawing.Size(346, 60);
             this.panelButtons.TabIndex = 1;
             this.panelButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.panelButtons_Paint_1);
-            // 
-            // panelBody
-            // 
-            this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.panelBody.Controls.Add(this.labelMessage);
-            this.panelBody.Controls.Add(this.pictureBoxIcon);
-            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panelBody.Location = new System.Drawing.Point(3, 33);
-            this.panelBody.Margin = new System.Windows.Forms.Padding(4);
-            this.panelBody.Name = "panelBody";
-            this.panelBody.Padding = new System.Windows.Forms.Padding(24, 16, 7, 0);
-            this.panelBody.Size = new System.Drawing.Size(461, 76);
-            this.panelBody.TabIndex = 2;
-            // 
-            // labelMessage
-            // 
-            this.labelMessage.AutoSize = true;
-            this.labelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.ForeColor = System.Drawing.Color.White;
-            this.labelMessage.Location = new System.Drawing.Point(77, 16);
-            this.labelMessage.Margin = new System.Windows.Forms.Padding(13, 0, 4, 0);
-            this.labelMessage.MaximumSize = new System.Drawing.Size(800, 0);
-            this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Padding = new System.Windows.Forms.Padding(7, 6, 29, 18);
-            this.labelMessage.Size = new System.Drawing.Size(131, 41);
-            this.labelMessage.TabIndex = 1;
-            this.labelMessage.Text = "labelMessage";
-            this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelMessage.Click += new System.EventHandler(this.lblMessage_Click);
-            // 
-            // pictureBoxIcon
-            // 
-            this.pictureBoxIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
-            this.pictureBoxIcon.Location = new System.Drawing.Point(24, 16);
-            this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(11, 4, 4, 4);
-            this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Padding = new System.Windows.Forms.Padding(0, 9, 0, 0);
-            this.pictureBoxIcon.Size = new System.Drawing.Size(53, 60);
-            this.pictureBoxIcon.TabIndex = 0;
-            this.pictureBoxIcon.TabStop = false;
             // 
             // button3
             // 
@@ -155,10 +108,9 @@ namespace WinrarKG.Msgbox
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(308, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(231, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 34);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
@@ -171,10 +123,9 @@ namespace WinrarKG.Msgbox
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(167, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(125, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 34);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = false;
@@ -187,27 +138,67 @@ namespace WinrarKG.Msgbox
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(25, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(19, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 34);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // panelBody
+            // 
+            this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panelBody.Controls.Add(this.labelMessage);
+            this.panelBody.Controls.Add(this.pictureBoxIcon);
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.panelBody.Location = new System.Drawing.Point(2, 27);
+            this.panelBody.Name = "panelBody";
+            this.panelBody.Padding = new System.Windows.Forms.Padding(18, 13, 5, 0);
+            this.panelBody.Size = new System.Drawing.Size(346, 61);
+            this.panelBody.TabIndex = 2;
+            // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.ForeColor = System.Drawing.Color.White;
+            this.labelMessage.Location = new System.Drawing.Point(58, 13);
+            this.labelMessage.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.labelMessage.MaximumSize = new System.Drawing.Size(600, 0);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Padding = new System.Windows.Forms.Padding(5, 5, 22, 15);
+            this.labelMessage.Size = new System.Drawing.Size(122, 37);
+            this.labelMessage.TabIndex = 1;
+            this.labelMessage.Text = "labelMessage";
+            this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelMessage.Click += new System.EventHandler(this.lblMessage_Click);
+            // 
+            // pictureBoxIcon
+            // 
+            this.pictureBoxIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
+            this.pictureBoxIcon.Location = new System.Drawing.Point(18, 13);
+            this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(8, 3, 3, 3);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            this.pictureBoxIcon.Size = new System.Drawing.Size(40, 48);
+            this.pictureBoxIcon.TabIndex = 0;
+            this.pictureBoxIcon.TabStop = false;
+            // 
             // FormMessageBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(467, 185);
+            this.ClientSize = new System.Drawing.Size(350, 150);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelTitleBar);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(461, 176);
+            this.MinimumSize = new System.Drawing.Size(350, 150);
             this.Name = "FormMessageBox";
-            this.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.panelTitleBar.ResumeLayout(false);
