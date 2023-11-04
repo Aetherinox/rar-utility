@@ -301,7 +301,9 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully saved rarreg.key.\nRestart WinRAR for license to apply..
+        ///   Looks up a localized string similar to Successfully saved rarreg.key.
+        ///
+        ///Restart WinRAR for license to apply..
         /// </summary>
         internal static string msgbox_save_msg {
             get {

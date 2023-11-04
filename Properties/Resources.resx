@@ -215,7 +215,9 @@ Then place the file in your WinRAR folder.</value>
     <value>No name specified</value>
   </data>
   <data name="msgbox_save_msg" xml:space="preserve">
-    <value>Successfully saved rarreg.key.\nRestart WinRAR for license to apply.</value>
+    <value>Successfully saved rarreg.key.
+
+Restart WinRAR for license to apply.</value>
   </data>
   <data name="msgbox_save_title" xml:space="preserve">
     <value>Keygen Installed Successfully</value>

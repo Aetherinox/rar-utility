@@ -92,9 +92,9 @@ The only option I'd have is to contact these websites and tell them that it's a 
 
 I scanned with Windows Defender and it reported that the files are clean.
 
-- [VirusTotal](https://virustotal.com/gui/file/e33720fc9780dd54fd8a0ecd1ac7918c2cbbddd4496cfc759bda9641c1809c1c?nocache=1)
-- [Jotti](https://virusscan.jotti.org/en-US/filescanjob/23j4l5ftc9)
-- [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMTEwM3NoWldkMjl4S2lOd1R0ODlQUFU/regular/overview)
+- [VirusTotal](https://www.virustotal.com/gui/file/3420b7bf9c6d368044aa913e3d06f58cfd2efb17e760916b8f9fc9cd9fa73422)
+- [Jotti](https://virusscan.jotti.org/en-US/filescanjob/yxbdaalkbf,kgf3nbnlqe)
+- [MetaDefender](https://metadefender.opswat.com/results/file/bzIzMTEwNEZySDlaS29xRUROMUJMT3lIeVNV/regular/overview)
 
 <br />
 
@@ -104,8 +104,8 @@ I scanned with Windows Defender and it reported that the files are clean.
 
 # Previews
 
-![Main screen](https://i.imgur.com/3hrolF6.png)
-![Save key file](https://i.imgur.com/Z96Xc55.png)
-![Save success](https://i.imgur.com/Urt186k.png)
-![License activated](https://i.imgur.com/oUKAXf9.png)
-![About panel](https://i.imgur.com/pr3SC89.png)
+![Main screen](https://i.imgur.com/rZfHQFp.png)
+![Save key file](https://i.imgur.com/y4wx8fD.png)
+![Save success](https://i.imgur.com/ajbn3On.png)
+![License activated](https://i.imgur.com/8BZ3CJc.png)
+![About panel](https://i.imgur.com/YpML6XU.png)
