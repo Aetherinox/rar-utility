@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+﻿/*
+    @app        : WinRAR Keygen
+    @repo       : https://github.com/Aetherinox/WinrarKeygen
+    @author     : Aetherinox
+*/
+
+#region "Using"
+
+using System;
 using System.Reflection;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
+using Res = WinrarKG.Properties.Resources;
+using Cfg = WinrarKG.Properties.Settings;
+
+#endregion
 
 namespace WinrarKG
 {
@@ -21,8 +24,59 @@ namespace WinrarKG
     class AppInfo
     {
 
+        #region "Define: Fileinfo"
+
+            /*
+                Define > File Name
+                    utilized with logging
+            */
+
+            readonly static string log_file = "AppInfo.cs";
+
+        #endregion
+
+        /*
+             AppInfo > Get Debug
+
+             @ret       : bool
+        */
+
+        public bool bIsDebug( )
+        {
+            if ( System.Diagnostics.Debugger.IsAttached )
+                return true;
+
+            if ( Cfg.Default.app_bDevmode )
+                return true;
+
+            #if DEBUG
+                return true;
+            #else
+                return false;
+            #endif
+        }
+
+        /*
+             AppInfo > Get Resources
+
+             @ret       : string
+        */
+
+        public string GetResources( )
+        {
+            foreach(string resourceName in Assembly.GetExecutingAssembly( ).GetManifestResourceNames( ) )
+            {
+                return resourceName;
+            }
+
+            return string.Empty;
+        }
+
         /*
             AppInfo -> Title
+
+            @usage      : string title = AppInfo.Title;
+            @ret        : str
         */
 
         public static string Title
@@ -40,6 +94,9 @@ namespace WinrarKG
 
         /*
             AppInfo -> Description
+
+            @usage      : string description = AppInfo.Description;
+            @ret        : str
         */
 
         public static string Description
@@ -56,7 +113,10 @@ namespace WinrarKG
         }
 
         /*
-            AppInfo -> Author
+            AppInfo -> Trademark
+
+            @usage      : string trademark = AppInfo.Trademark;
+            @ret        : str
         */
 
         public static string Trademark
@@ -74,6 +134,9 @@ namespace WinrarKG
 
         /*
             AppInfo -> Company
+
+            @usage      : string company = AppInfo.Company;
+            @ret        : str
         */
 
         public static string Company
@@ -91,6 +154,9 @@ namespace WinrarKG
 
         /*
             AppInfo -> Copyright
+
+            @usage      : string copyright = AppInfo.Copyright;
+            @ret        : str
         */
 
         public static string Copyright
@@ -99,7 +165,7 @@ namespace WinrarKG
             {
                 AssemblyCopyrightAttribute cr = (AssemblyCopyrightAttribute)Assembly.GetExecutingAssembly().GetCustomAttribute(typeof(AssemblyCopyrightAttribute));
 
-                if (cr != null && !string.IsNullOrEmpty(cr.Copyright))
+                if ( cr != null && !string.IsNullOrEmpty( cr.Copyright ) )
                     return cr.Copyright;
 
                 return string.Empty;
@@ -108,6 +174,9 @@ namespace WinrarKG
 
         /*
             AppInfo -> Version
+
+            @usage      : string version = AppInfo.PublishVersion;
+            @ret        : str
         */
 
         public static string Version
@@ -124,6 +193,13 @@ namespace WinrarKG
             }
         }
 
+        /*
+            AppInfo -> Product Version
+
+            @usage      : string product_ver = AppInfo.ProductVersion;
+            @ret        : str
+        */
+
         public static string ProductVersionCore
         {
             get
@@ -132,21 +208,122 @@ namespace WinrarKG
             }
         }
 
+        /*
+            AppInfo -> Publish Version
+
+            @usage      : string publish_ver = AppInfo.PublishVersion;
+            @ret        : str
+        */
+
         public static string PublishVersion
         {
             get
             {
-                if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+                if ( System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed )
                 {
                     Version ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
-                    return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+                    return string.Format( "{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision );
                 }
                 else
                 {
                     var ver = Assembly.GetExecutingAssembly().GetName().Version;
-                    return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+                    return string.Format( "{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision );
                 }
             }
         }
+
+        /*
+            AppInfo -> Update Available
+                returns if an update is available by comparing the provided version
+                with the product version.
+
+        @ret            : true      Update Available
+                          false     Current version
+
+        */
+
+        public bool UpdateAvailable( string v2 )
+        { 
+
+            string v1       = PublishVersion;
+            int vnum_1      = 0;
+            int vnum_2      = 0;
+ 
+            for ( int i = 0, j = 0; ( i < v1.Length || j < v2.Length ); )
+            {
+       
+                while ( i < v1.Length && v1[ i ] != '.' )
+                {
+                    vnum_1 = vnum_1 * 10 + ( v1[ i ] - '0' );
+                    i++;
+                }
+ 
+                while ( j < v2.Length && v2[ j ] != '.' )
+                {
+                    vnum_2 = vnum_2 * 10 + ( v2[ j ] - '0' );
+                    j++;
+                }
+ 
+                if ( vnum_1 > vnum_2 )
+                    return false;
+                if ( vnum_2 > vnum_1 )
+                    return true;
+ 
+                vnum_1 = vnum_2 = 0;
+
+                i++;
+                j++;
+            }
+
+            return false;
+        }
+
+        /*
+            AppInfo -> Version Check
+                compare two versions.
+
+            @arg        : str v1
+            @arg        : str v2
+            @ret        : 0 = equal
+                          1 = v2 smaller
+                         -1 = v1 smaller
+
+        */
+
+        static int VersionCheck( string v1, string v2 )
+        {
+
+            int vnum_1      = 0;
+            int vnum_2      = 0;
+ 
+            for ( int i = 0, j = 0; ( i < v1.Length || j < v2.Length ); )
+            {
+ 
+                while ( i < v1.Length && v1[ i ] != '.' )
+                {
+                    vnum_1 = vnum_1 * 10 + ( v1[ i ] - '0' );
+                    i++;
+                }
+ 
+                while ( j < v2.Length && v2[ j ] != '.' )
+                {
+                    vnum_2 = vnum_2 * 10 + ( v2[ j ] - '0' );
+                    j++;
+                }
+ 
+                if ( vnum_1 > vnum_2 )
+                    return 1;
+                if ( vnum_2 > vnum_1 )
+                    return -1;
+ 
+                vnum_1 = vnum_2 = 0;
+
+                i++;
+                j++;
+            } 
+
+            return 0; 
+        } 
+
     }
 }

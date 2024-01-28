@@ -67,11 +67,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>70575BDFB02B3F1B45A37431BEF9A8C9933A4ACE</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>58A1539D6988D76F44BAE27C27ED5645D3B1222A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>aetherx_9a.priv.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -80,13 +79,16 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>aetherx_piv_9a.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>aetherx_9a.priv.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestTimestampUrl>http://timestamp.comodoca.com/authenticode</ManifestTimestampUrl>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -112,7 +114,10 @@
   <ItemGroup>
     <Compile Include="Classes\AppInfo.cs" />
     <Compile Include="Classes\Helpers.cs" />
+    <Compile Include="Classes\Log.cs" />
     <Compile Include="Classes\MessageBox.cs" />
+    <Compile Include="Classes\Perms.cs" />
+    <Compile Include="Classes\Receiver.cs" />
     <Compile Include="Controls\ControlButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -121,6 +126,12 @@
     </Compile>
     <Compile Include="Controls\ControlTextbox.Designer.cs">
       <DependentUpon>ControlTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormContribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormContribute.Designer.cs">
+      <DependentUpon>FormContribute.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormAbout.cs">
       <SubType>Form</SubType>
@@ -151,6 +162,9 @@
       <DependentUpon>FormAbout.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormContribute.resx">
+      <DependentUpon>FormContribute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,7 +182,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="aetherx_piv_9a.pfx" />
+    <None Include="aetherx_9a.priv.pfx" />
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -180,7 +195,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\winrarkg_cli.exe" />
     <None Include="bin\Release\winrarkg_cli.exe" />
+    <None Include="Materials\bch.png" />
+    <None Include="Materials\bg_header.jpg" />
+    <None Include="Materials\btc.png" />
+    <None Include="Materials\eth.png" />
+    <None Include="Materials\notify_01.png" />
     <Content Include="Materials\winrar_128.ico" />
     <None Include="Materials\error.png" />
     <None Include="Materials\question.png" />

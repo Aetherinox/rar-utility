@@ -45,173 +45,56 @@ namespace WinrarKG
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormParent));
-            this.minimizeBtn = new System.Windows.Forms.Label();
-            this.closeBtn = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
-            this.mnuTop = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_LicenseKey = new System.Windows.Forms.Label();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_Company = new System.Windows.Forms.Label();
-            this.btnSave = new WinrarKG.AetherxButton();
+            this.mnu_Main = new System.Windows.Forms.MenuStrip();
+            this.mnu_Cat_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Sub_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Cat_Contribute = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Cat_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Sub_Updates = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Sub_Validate = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Help_Sep_1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnu_Sub_About = new System.Windows.Forms.ToolStripMenuItem();
+            this.imgHeader = new System.Windows.Forms.PictureBox();
+            this.lbl_HeaderSub = new System.Windows.Forms.Label();
+            this.lbl_HeaderName = new System.Windows.Forms.Label();
+            this.btn_Close = new System.Windows.Forms.Label();
+            this.btn_Minimize = new System.Windows.Forms.Label();
+            this.pnl_StatusParent = new System.Windows.Forms.Panel();
+            this.status_Strip = new System.Windows.Forms.StatusStrip();
+            this.lbl_StatusOutput = new System.Windows.Forms.ToolStripStatusLabel();
             this.txt_Company = new WinrarKG.AetherxTextBox();
+            this.btnSave = new WinrarKG.AetherxButton();
             this.txt_LicenseKey = new WinrarKG.AetherxTextBox();
             this.txt_User = new WinrarKG.AetherxTextBox();
             this.btnCopy = new WinrarKG.AetherxButton();
             this.btnGenerate = new WinrarKG.AetherxButton();
-            this.mnuTop.SuspendLayout();
-            this.statusStrip.SuspendLayout();
+            this.mnu_Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHeader)).BeginInit();
+            this.pnl_StatusParent.SuspendLayout();
+            this.status_Strip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // minimizeBtn
-            // 
-            this.minimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizeBtn.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimizeBtn.Location = new System.Drawing.Point(469, 12);
-            this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(13, 32);
-            this.minimizeBtn.TabIndex = 8;
-            this.minimizeBtn.Text = "―";
-            this.minimizeBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.minimizeBtn.Click += new System.EventHandler(this.btn_Window_Minimize_Click);
-            this.minimizeBtn.MouseEnter += new System.EventHandler(this.btn_Window_Minimize_MouseEnter);
-            this.minimizeBtn.MouseLeave += new System.EventHandler(this.btn_Window_Minimize_MouseLeave);
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeBtn.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.closeBtn.Location = new System.Drawing.Point(494, 7);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(24, 32);
-            this.closeBtn.TabIndex = 9;
-            this.closeBtn.Text = "x";
-            this.closeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.closeBtn.Click += new System.EventHandler(this.btn_Window_Close_Click);
-            this.closeBtn.MouseEnter += new System.EventHandler(this.btn_Window_Close_MouseEnter);
-            this.closeBtn.MouseLeave += new System.EventHandler(this.btn_Window_Close_MouseLeave);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(6)))), ((int)(((byte)(85)))));
-            this.lblTitle.Location = new System.Drawing.Point(14, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(267, 30);
-            this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "WinRAR License Generator";
-            this.lblTitle.Click += new System.EventHandler(this.lbl_Title_Click);
             // 
             // lbl_User
             // 
             this.lbl_User.AutoSize = true;
-            this.lbl_User.Location = new System.Drawing.Point(12, 99);
+            this.lbl_User.Location = new System.Drawing.Point(15, 158);
             this.lbl_User.Name = "lbl_User";
             this.lbl_User.Size = new System.Drawing.Size(52, 21);
-            this.lbl_User.TabIndex = 6;
+            this.lbl_User.TabIndex = 0;
             this.lbl_User.Text = "Name";
             this.lbl_User.Click += new System.EventHandler(this.lbl_Serial_Sub_Click);
-            // 
-            // mnuTop
-            // 
-            this.mnuTop.AutoSize = false;
-            this.mnuTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.mnuTop.Dock = System.Windows.Forms.DockStyle.None;
-            this.mnuTop.GripMargin = new System.Windows.Forms.Padding(12, 2, 0, 2);
-            this.mnuTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.mnuTop.Location = new System.Drawing.Point(1, 46);
-            this.mnuTop.Name = "mnuTop";
-            this.mnuTop.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.mnuTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mnuTop.Size = new System.Drawing.Size(528, 32);
-            this.mnuTop.TabIndex = 1;
-            this.mnuTop.Text = "menuStrip1";
-            this.mnuTop.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuTop_ItemClicked);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 28);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem1});
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 28);
-            this.aboutToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.aboutToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.AutoSize = false;
-            this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.statusStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusStrip.ForeColor = System.Drawing.Color.Red;
-            this.statusStrip.GripMargin = new System.Windows.Forms.Padding(0);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.statusStrip.Location = new System.Drawing.Point(1, 494);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip.Size = new System.Drawing.Size(528, 28);
-            this.statusStrip.SizingGrip = false;
-            this.statusStrip.TabIndex = 0;
-            this.statusStrip.Text = "statusStrip1";
-            this.statusStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip_ItemClicked);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.ActiveLinkColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel1.LinkVisited = true;
-            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(5, 3, 0, 2);
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(139, 19);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // lbl_LicenseKey
             // 
             this.lbl_LicenseKey.AutoSize = true;
-            this.lbl_LicenseKey.Location = new System.Drawing.Point(12, 242);
+            this.lbl_LicenseKey.Location = new System.Drawing.Point(12, 301);
             this.lbl_LicenseKey.Name = "lbl_LicenseKey";
             this.lbl_LicenseKey.Size = new System.Drawing.Size(166, 21);
             this.lbl_LicenseKey.TabIndex = 20;
@@ -253,11 +136,255 @@ namespace WinrarKG
             // lbl_Company
             // 
             this.lbl_Company.AutoSize = true;
-            this.lbl_Company.Location = new System.Drawing.Point(12, 169);
+            this.lbl_Company.Location = new System.Drawing.Point(15, 228);
             this.lbl_Company.Name = "lbl_Company";
             this.lbl_Company.Size = new System.Drawing.Size(151, 21);
-            this.lbl_Company.TabIndex = 23;
+            this.lbl_Company.TabIndex = 3;
             this.lbl_Company.Text = "Company or License";
+            // 
+            // mnu_Main
+            // 
+            this.mnu_Main.AutoSize = false;
+            this.mnu_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.mnu_Main.Dock = System.Windows.Forms.DockStyle.None;
+            this.mnu_Main.GripMargin = new System.Windows.Forms.Padding(12, 2, 0, 2);
+            this.mnu_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_Cat_File,
+            this.mnu_Cat_Contribute,
+            this.mnu_Cat_Help});
+            this.mnu_Main.Location = new System.Drawing.Point(1, 100);
+            this.mnu_Main.Name = "mnu_Main";
+            this.mnu_Main.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.mnu_Main.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.mnu_Main.Size = new System.Drawing.Size(528, 38);
+            this.mnu_Main.TabIndex = 24;
+            this.mnu_Main.Text = "menuStrip1";
+            this.mnu_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.mnu_Main_Paint);
+            // 
+            // mnu_Cat_File
+            // 
+            this.mnu_Cat_File.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.mnu_Cat_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_Sub_Exit});
+            this.mnu_Cat_File.ForeColor = System.Drawing.Color.White;
+            this.mnu_Cat_File.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.mnu_Cat_File.Name = "mnu_Cat_File";
+            this.mnu_Cat_File.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.mnu_Cat_File.Size = new System.Drawing.Size(53, 34);
+            this.mnu_Cat_File.Text = "File";
+            // 
+            // mnu_Sub_Exit
+            // 
+            this.mnu_Sub_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.mnu_Sub_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.mnu_Sub_Exit.ForeColor = System.Drawing.Color.White;
+            this.mnu_Sub_Exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnu_Sub_Exit.Name = "mnu_Sub_Exit";
+            this.mnu_Sub_Exit.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.mnu_Sub_Exit.Size = new System.Drawing.Size(180, 21);
+            this.mnu_Sub_Exit.Text = "Exit";
+            this.mnu_Sub_Exit.Click += new System.EventHandler(this.mnu_Sub_Exit_Click);
+            // 
+            // mnu_Cat_Contribute
+            // 
+            this.mnu_Cat_Contribute.ForeColor = System.Drawing.Color.White;
+            this.mnu_Cat_Contribute.Name = "mnu_Cat_Contribute";
+            this.mnu_Cat_Contribute.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.mnu_Cat_Contribute.Size = new System.Drawing.Size(92, 34);
+            this.mnu_Cat_Contribute.Text = "Contribute";
+            this.mnu_Cat_Contribute.Click += new System.EventHandler(this.mnu_Cat_Contribute_Click);
+            // 
+            // mnu_Cat_Help
+            // 
+            this.mnu_Cat_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_Sub_Updates,
+            this.mnu_Sub_Validate,
+            this.mnu_Help_Sep_1,
+            this.mnu_Sub_About});
+            this.mnu_Cat_Help.ForeColor = System.Drawing.Color.White;
+            this.mnu_Cat_Help.Name = "mnu_Cat_Help";
+            this.mnu_Cat_Help.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.mnu_Cat_Help.Size = new System.Drawing.Size(60, 34);
+            this.mnu_Cat_Help.Text = "Help";
+            // 
+            // mnu_Sub_Updates
+            // 
+            this.mnu_Sub_Updates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.mnu_Sub_Updates.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.mnu_Sub_Updates.ForeColor = System.Drawing.Color.White;
+            this.mnu_Sub_Updates.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mnu_Sub_Updates.Name = "mnu_Sub_Updates";
+            this.mnu_Sub_Updates.Size = new System.Drawing.Size(168, 22);
+            this.mnu_Sub_Updates.Text = "Updates";
+            this.mnu_Sub_Updates.Click += new System.EventHandler(this.mnu_Sub_Updates_Click);
+            this.mnu_Sub_Updates.Paint += new System.Windows.Forms.PaintEventHandler(this.mnu_Sub_Updates_Paint);
+            // 
+            // mnu_Sub_Validate
+            // 
+            this.mnu_Sub_Validate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.mnu_Sub_Validate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.mnu_Sub_Validate.ForeColor = System.Drawing.Color.White;
+            this.mnu_Sub_Validate.Name = "mnu_Sub_Validate";
+            this.mnu_Sub_Validate.Size = new System.Drawing.Size(168, 22);
+            this.mnu_Sub_Validate.Text = "Validate Signature";
+            this.mnu_Sub_Validate.Click += new System.EventHandler(this.mnu_Sub_Validate_Click);
+            // 
+            // mnu_Help_Sep_1
+            // 
+            this.mnu_Help_Sep_1.AutoSize = false;
+            this.mnu_Help_Sep_1.BackColor = System.Drawing.Color.Black;
+            this.mnu_Help_Sep_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.mnu_Help_Sep_1.Name = "mnu_Help_Sep_1";
+            this.mnu_Help_Sep_1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
+            this.mnu_Help_Sep_1.Size = new System.Drawing.Size(165, 1);
+            // 
+            // mnu_Sub_About
+            // 
+            this.mnu_Sub_About.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.mnu_Sub_About.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.mnu_Sub_About.ForeColor = System.Drawing.Color.White;
+            this.mnu_Sub_About.Name = "mnu_Sub_About";
+            this.mnu_Sub_About.Size = new System.Drawing.Size(168, 22);
+            this.mnu_Sub_About.Text = "About";
+            this.mnu_Sub_About.Click += new System.EventHandler(this.mnu_Sub_About_Click);
+            // 
+            // imgHeader
+            // 
+            this.imgHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.imgHeader.BackgroundImage = global::WinrarKG.Properties.Resources.bg_header;
+            this.imgHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgHeader.Location = new System.Drawing.Point(1, 1);
+            this.imgHeader.Name = "imgHeader";
+            this.imgHeader.Size = new System.Drawing.Size(528, 129);
+            this.imgHeader.TabIndex = 29;
+            this.imgHeader.TabStop = false;
+            this.imgHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imgHeader_MouseDown);
+            this.imgHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.imgHeader_MouseMove);
+            this.imgHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imgHeader_MouseUp);
+            // 
+            // lbl_HeaderSub
+            // 
+            this.lbl_HeaderSub.AutoSize = true;
+            this.lbl_HeaderSub.Font = new System.Drawing.Font("Segoe UI", 9.2F);
+            this.lbl_HeaderSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.lbl_HeaderSub.Location = new System.Drawing.Point(24, 56);
+            this.lbl_HeaderSub.Name = "lbl_HeaderSub";
+            this.lbl_HeaderSub.Size = new System.Drawing.Size(51, 17);
+            this.lbl_HeaderSub.TabIndex = 38;
+            this.lbl_HeaderSub.Text = "Version";
+            this.lbl_HeaderSub.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderSub_MouseDown);
+            this.lbl_HeaderSub.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderSub_MouseMove);
+            this.lbl_HeaderSub.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderSub_MouseUp);
+            // 
+            // lbl_HeaderName
+            // 
+            this.lbl_HeaderName.AutoSize = true;
+            this.lbl_HeaderName.Font = new System.Drawing.Font("Myriad Pro Light", 20F);
+            this.lbl_HeaderName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(41)))), ((int)(((byte)(101)))));
+            this.lbl_HeaderName.Location = new System.Drawing.Point(21, 23);
+            this.lbl_HeaderName.Name = "lbl_HeaderName";
+            this.lbl_HeaderName.Size = new System.Drawing.Size(186, 32);
+            this.lbl_HeaderName.TabIndex = 35;
+            this.lbl_HeaderName.Text = "WinRAR Keygen";
+            this.lbl_HeaderName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderName_MouseClick);
+            this.lbl_HeaderName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderName_MouseDown);
+            this.lbl_HeaderName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderName_MouseMove);
+            this.lbl_HeaderName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lbl_HeaderName_MouseUp);
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Close.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Close.Location = new System.Drawing.Point(490, 7);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(24, 32);
+            this.btn_Close.TabIndex = 10;
+            this.btn_Close.Text = "";
+            this.btn_Close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Window_Close_Click);
+            this.btn_Close.MouseEnter += new System.EventHandler(this.btn_Window_Close_MouseEnter);
+            this.btn_Close.MouseLeave += new System.EventHandler(this.btn_Window_Close_MouseLeave);
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Minimize.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Minimize.Location = new System.Drawing.Point(462, 8);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(13, 32);
+            this.btn_Minimize.TabIndex = 9;
+            this.btn_Minimize.Text = "―";
+            this.btn_Minimize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Minimize.Click += new System.EventHandler(this.btn_Window_Minimize_Click);
+            this.btn_Minimize.MouseEnter += new System.EventHandler(this.btn_Window_Minimize_MouseEnter);
+            this.btn_Minimize.MouseLeave += new System.EventHandler(this.btn_Window_Minimize_MouseLeave);
+            // 
+            // pnl_StatusParent
+            // 
+            this.pnl_StatusParent.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_StatusParent.Controls.Add(this.status_Strip);
+            this.pnl_StatusParent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_StatusParent.Location = new System.Drawing.Point(0, 549);
+            this.pnl_StatusParent.Name = "pnl_StatusParent";
+            this.pnl_StatusParent.Padding = new System.Windows.Forms.Padding(1, 0, 1, 1);
+            this.pnl_StatusParent.Size = new System.Drawing.Size(530, 31);
+            this.pnl_StatusParent.TabIndex = 39;
+            // 
+            // status_Strip
+            // 
+            this.status_Strip.AutoSize = false;
+            this.status_Strip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.status_Strip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.status_Strip.ForeColor = System.Drawing.Color.Red;
+            this.status_Strip.GripMargin = new System.Windows.Forms.Padding(0);
+            this.status_Strip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_StatusOutput});
+            this.status_Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.status_Strip.Location = new System.Drawing.Point(1, 0);
+            this.status_Strip.Name = "status_Strip";
+            this.status_Strip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.status_Strip.Size = new System.Drawing.Size(528, 30);
+            this.status_Strip.SizingGrip = false;
+            this.status_Strip.TabIndex = 0;
+            this.status_Strip.Text = "statusStrip1";
+            // 
+            // lbl_StatusOutput
+            // 
+            this.lbl_StatusOutput.ActiveLinkColor = System.Drawing.Color.White;
+            this.lbl_StatusOutput.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbl_StatusOutput.ForeColor = System.Drawing.Color.White;
+            this.lbl_StatusOutput.LinkVisited = true;
+            this.lbl_StatusOutput.Margin = new System.Windows.Forms.Padding(5, 3, 0, 2);
+            this.lbl_StatusOutput.Name = "lbl_StatusOutput";
+            this.lbl_StatusOutput.Size = new System.Drawing.Size(96, 25);
+            this.lbl_StatusOutput.Text = "Status Output";
+            // 
+            // txt_Company
+            // 
+            this.txt_Company.AllowFocus = true;
+            this.txt_Company.AutoScroll = true;
+            this.txt_Company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txt_Company.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(6)))), ((int)(((byte)(85)))));
+            this.txt_Company.BorderFocusColor = System.Drawing.Color.White;
+            this.txt_Company.BorderSize = 1;
+            this.txt_Company.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_Company.ForeColor = System.Drawing.Color.White;
+            this.txt_Company.Location = new System.Drawing.Point(19, 254);
+            this.txt_Company.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Company.Multiline = false;
+            this.txt_Company.MultilineScrollbars = true;
+            this.txt_Company.Name = "txt_Company";
+            this.txt_Company.Padding = new System.Windows.Forms.Padding(8, 3, 8, 3);
+            this.txt_Company.PasswordChar = false;
+            this.txt_Company.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_Company.PlaceholderText = "Unlimited Business License";
+            this.txt_Company.ReadOnly = false;
+            this.txt_Company.Selectable = true;
+            this.txt_Company.Size = new System.Drawing.Size(494, 28);
+            this.txt_Company.TabIndex = 4;
+            this.txt_Company.UnderlineStyle = false;
+            this.txt_Company.Value = "";
             // 
             // btnSave
             // 
@@ -267,83 +394,67 @@ namespace WinrarKG
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(390, 440);
+            this.btnSave.Location = new System.Drawing.Point(390, 499);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 29);
-            this.btnSave.TabIndex = 7;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "&Save keyfile";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txt_Company
-            // 
-            this.txt_Company.AutoScroll = true;
-            this.txt_Company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txt_Company.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(6)))), ((int)(((byte)(85)))));
-            this.txt_Company.BorderFocusColor = System.Drawing.Color.White;
-            this.txt_Company.BorderSize = 1;
-            this.txt_Company.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_Company.ForeColor = System.Drawing.Color.White;
-            this.txt_Company.Location = new System.Drawing.Point(19, 195);
-            this.txt_Company.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Company.Multiline = false;
-            this.txt_Company.Name = "txt_Company";
-            this.txt_Company.Padding = new System.Windows.Forms.Padding(8, 3, 8, 3);
-            this.txt_Company.PasswordChar = false;
-            this.txt_Company.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_Company.PlaceholderText = "Unlimited Business License";
-            this.txt_Company.ReadOnly = false;
-            this.txt_Company.Size = new System.Drawing.Size(494, 28);
-            this.txt_Company.TabIndex = 3;
-            this.txt_Company.UnderlineStyle = false;
-            this.txt_Company.Value = "";
+            this.btnSave.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btnSave.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
+            this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
             // 
             // txt_LicenseKey
             // 
+            this.txt_LicenseKey.AllowFocus = true;
             this.txt_LicenseKey.AutoScroll = true;
-            this.txt_LicenseKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.txt_LicenseKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txt_LicenseKey.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(6)))), ((int)(((byte)(85)))));
             this.txt_LicenseKey.BorderFocusColor = System.Drawing.Color.White;
             this.txt_LicenseKey.BorderSize = 1;
             this.txt_LicenseKey.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_LicenseKey.ForeColor = System.Drawing.Color.White;
-            this.txt_LicenseKey.Location = new System.Drawing.Point(19, 268);
+            this.txt_LicenseKey.Location = new System.Drawing.Point(19, 327);
             this.txt_LicenseKey.Margin = new System.Windows.Forms.Padding(5);
             this.txt_LicenseKey.Multiline = true;
+            this.txt_LicenseKey.MultilineScrollbars = true;
             this.txt_LicenseKey.Name = "txt_LicenseKey";
             this.txt_LicenseKey.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txt_LicenseKey.PasswordChar = false;
             this.txt_LicenseKey.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_LicenseKey.PlaceholderText = "";
             this.txt_LicenseKey.ReadOnly = true;
+            this.txt_LicenseKey.Selectable = true;
             this.txt_LicenseKey.Size = new System.Drawing.Size(494, 158);
-            this.txt_LicenseKey.TabIndex = 4;
+            this.txt_LicenseKey.TabIndex = 5;
             this.txt_LicenseKey.UnderlineStyle = false;
             this.txt_LicenseKey.Value = "";
             // 
             // txt_User
             // 
+            this.txt_User.AllowFocus = true;
             this.txt_User.AutoScroll = true;
-            this.txt_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.txt_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txt_User.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(6)))), ((int)(((byte)(85)))));
             this.txt_User.BorderFocusColor = System.Drawing.Color.White;
             this.txt_User.BorderSize = 1;
             this.txt_User.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txt_User.ForeColor = System.Drawing.Color.White;
-            this.txt_User.Location = new System.Drawing.Point(19, 125);
+            this.txt_User.Location = new System.Drawing.Point(19, 184);
             this.txt_User.Margin = new System.Windows.Forms.Padding(5);
             this.txt_User.Multiline = false;
+            this.txt_User.MultilineScrollbars = true;
             this.txt_User.Name = "txt_User";
             this.txt_User.Padding = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.txt_User.PasswordChar = false;
             this.txt_User.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_User.PlaceholderText = null;
             this.txt_User.ReadOnly = false;
+            this.txt_User.Selectable = true;
             this.txt_User.Size = new System.Drawing.Size(494, 28);
-            this.txt_User.TabIndex = 2;
+            this.txt_User.TabIndex = 1;
             this.txt_User.UnderlineStyle = false;
             this.txt_User.Value = "";
-            this.txt_User._TextChanged += new System.EventHandler(this.txt_User__TextChanged);
             // 
             // btnCopy
             // 
@@ -353,13 +464,15 @@ namespace WinrarKG
             this.btnCopy.FlatAppearance.BorderSize = 0;
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopy.Location = new System.Drawing.Point(136, 440);
+            this.btnCopy.Location = new System.Drawing.Point(136, 499);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(69, 29);
-            this.btnCopy.TabIndex = 6;
+            this.btnCopy.TabIndex = 7;
             this.btnCopy.Text = "&Copy";
             this.btnCopy.UseVisualStyleBackColor = false;
             this.btnCopy.Click += new System.EventHandler(this.btn_Copy_Click);
+            this.btnCopy.MouseEnter += new System.EventHandler(this.btnCopy_MouseEnter);
+            this.btnCopy.MouseLeave += new System.EventHandler(this.btnCopy_MouseLeave);
             // 
             // btnGenerate
             // 
@@ -369,39 +482,42 @@ namespace WinrarKG
             this.btnGenerate.FlatAppearance.BorderSize = 0;
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.Location = new System.Drawing.Point(19, 440);
+            this.btnGenerate.Location = new System.Drawing.Point(19, 499);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(111, 29);
-            this.btnGenerate.TabIndex = 5;
+            this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "&Generate";
             this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btn_Generate_Click);
+            this.btnGenerate.MouseEnter += new System.EventHandler(this.btnGenerate_MouseEnter);
             // 
             // FormParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(530, 525);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(530, 580);
             this.Controls.Add(this.txt_Company);
+            this.Controls.Add(this.pnl_StatusParent);
+            this.Controls.Add(this.lbl_HeaderSub);
+            this.Controls.Add(this.lbl_HeaderName);
+            this.Controls.Add(this.btn_Close);
+            this.Controls.Add(this.btn_Minimize);
+            this.Controls.Add(this.mnu_Main);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lbl_Company);
             this.Controls.Add(this.txt_LicenseKey);
             this.Controls.Add(this.txt_User);
             this.Controls.Add(this.lbl_LicenseKey);
             this.Controls.Add(this.btnCopy);
-            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.lbl_User);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.mnuTop);
+            this.Controls.Add(this.imgHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.mnuTop;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormParent";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -411,28 +527,19 @@ namespace WinrarKG
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
-            this.mnuTop.ResumeLayout(false);
-            this.mnuTop.PerformLayout();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
+            this.mnu_Main.ResumeLayout(false);
+            this.mnu_Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHeader)).EndInit();
+            this.pnl_StatusParent.ResumeLayout(false);
+            this.status_Strip.ResumeLayout(false);
+            this.status_Strip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label minimizeBtn;
-        private System.Windows.Forms.Label closeBtn;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lbl_User;
-        private System.Windows.Forms.MenuStrip mnuTop;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private Label lbl_LicenseKey;
         private AetherxTextBox txt_User;
         private AetherxTextBox txt_LicenseKey;
@@ -445,6 +552,23 @@ namespace WinrarKG
         private AetherxButton btnGenerate;
         private AetherxButton btnCopy;
         private AetherxButton btnSave;
+        private MenuStrip mnu_Main;
+        private ToolStripMenuItem mnu_Cat_File;
+        private ToolStripMenuItem mnu_Sub_Exit;
+        private ToolStripMenuItem mnu_Cat_Contribute;
+        private ToolStripMenuItem mnu_Cat_Help;
+        private ToolStripMenuItem mnu_Sub_Updates;
+        private ToolStripMenuItem mnu_Sub_Validate;
+        private ToolStripSeparator mnu_Help_Sep_1;
+        private ToolStripMenuItem mnu_Sub_About;
+        private PictureBox imgHeader;
+        private Label lbl_HeaderSub;
+        private Label lbl_HeaderName;
+        private Label btn_Close;
+        private Label btn_Minimize;
+        private Panel pnl_StatusParent;
+        private StatusStrip status_Strip;
+        private ToolStripStatusLabel lbl_StatusOutput;
     }
 }
 

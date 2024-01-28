@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+    @app        : WinRAR Keygen
+    @repo       : https://github.com/Aetherinox/WinrarKeygen
+    @author     : Aetherinox
+*/
+
+using System;
 using System.Windows.Forms;
 using WinrarKG.Msgbox;
 
 namespace WinrarKG
 {
+
     public abstract class MessageBox
     {
         public static DialogResult Show(string text)

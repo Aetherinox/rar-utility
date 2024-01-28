@@ -1,83 +1,119 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Management.Automation;
-using System.Text;
+﻿/*
+    @app        : WinRAR Keygen
+    @repo       : https://github.com/Aetherinox/WinrarKeygen
+    @author     : Aetherinox
+*/
+
+#region "Using"
+
+using System;
 using System.IO;
-using Lng = WinrarKG.Properties.Resources;
-using Cfg = WinrarKG.Properties.Settings;
 using System.Windows.Forms;
+using System.Diagnostics;
+using Res = WinrarKG.Properties.Resources;
+using Cfg = WinrarKG.Properties.Settings;
+
+#endregion
 
 namespace WinrarKG
 {
     class Serial
     {
 
-        static private string app_exe = Cfg.Default.app_def_exe;
-        static private string app_loc = AppDomain.CurrentDomain.BaseDirectory + "\\" + app_exe;
+        #region "Define: Fileinfo"
 
+            /*
+                Define > File Name
+                    utilized with logging
+            */
 
-        /*
-             To generate WinRAR license key, we rely on our command-line tool.
-             Utilize MS Powershell to run the generation command and then feed results
-             back into the keygen.
+            readonly static string log_file = "Serial.cs";
 
-             @param : str query
-                      command to execute in winrar cli
-         */
+        #endregion
 
-        public string Generate(String query)
-        {
+        #region "Define: Classes"
 
-            // Export patched resource file
-            File.WriteAllBytes(app_exe, WinrarKG.Properties.Resources.winrarkg_cli);
+            private AppInfo AppInfo     = new AppInfo( );
+            private Helpers Helpers     = new Helpers( );
 
-            if (!File.Exists(app_exe))
+        #endregion
+
+        #region "Define: Base Paths"
+
+            /*
+                Could not find Winrar.exe
+
+                patch_launch_fullpath       : Full path to exe
+                patch_launch_dir            : Directory only
+                patch_launch_exe            : Patcher exe filename only
+            */
+
+            static private string patch_launch_fullpath     = Process.GetCurrentProcess( ).MainModule.FileName;
+            static private string patch_launch_dir          = Path.GetDirectoryName( patch_launch_fullpath );
+            static private string patch_launch_exe          = Path.GetFileName( patch_launch_fullpath );
+            static private string app_target_exe            = Cfg.Default.app_winrar_exe;
+
+        #endregion
+
+        #region "Define: Base Paths > CLI"
+
+            /*
+                variables > current keygen path / folder
+            */
+
+            static private string app_cli_exe               = Cfg.Default.app_def_exe;                          // winrarkg_cli.exe
+            static private string app_cli_path              = Path.Combine( patch_launch_dir, app_cli_exe );    // x:\path\to\winrarkg_cli.exe
+
+        #endregion
+
+        #region "Method: Generate"
+
+            /*
+                 To generate WinRAR license key, we rely on our command-line tool.
+                 Utilize MS Powershell to run the generation command and then feed results
+                 back into the keygen.
+
+                 @param : str query
+                          command to execute in winrar cli
+             */
+
+            public string Generate( string query )
             {
-                MessageBox.Show(
-                    string.Format(Lng.msgbox_err_libmissing_msg, Environment.NewLine, app_exe, Environment.NewLine, Environment.NewLine),
-                    Lng.msgbox_err_libmissing_title,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
 
-                return "Error";
-            }
+                // Export patched resource file
+                File.WriteAllBytes( app_cli_exe, WinrarKG.Properties.Resources.winrarkg_cli );
 
-            using (PowerShell ps = PowerShell.Create())
-            {
-                // Source functions
-                ps.AddScript(query);
-
-                // invoke execution on pipeline (collect output)
-                Collection<PSObject> PSOutput = ps.Invoke();
-
-                // new string
-                StringBuilder sb = new StringBuilder();
-
-                // loop through each output object item
-                foreach (PSObject outputItem in PSOutput)
+                if ( !File.Exists( app_cli_exe ) )
                 {
-                    // if null object dumped to pipeline during script execution; then a null object may be present here
-                    if (outputItem != null)
-                    {
-                        Console.WriteLine($"Output line: [{outputItem}]");
-                        sb.AppendLine(outputItem.ToString());
-                    }
+                    MessageBox.Show
+                    (
+                        new Form( ) { TopMost = true, TopLevel = true, StartPosition = FormStartPosition.CenterScreen },
+                        string.Format( Res.msgbox_err_libmissing_msg, Environment.NewLine, app_cli_exe, Environment.NewLine, Environment.NewLine ),
+                        Res.msgbox_err_libmissing_title,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+
+                    return "Failed to generate license";
                 }
 
-                // error stream
-                if (ps.Streams.Error.Count > 0)
+                string[] ps_query   = { query };
+                string results      = Helpers.PowershellQ( ps_query );
+
+                if ( !String.IsNullOrEmpty( results ) )
                 {
-                    // Error collection I might add later
+                    // delete resource
+                    if (File.Exists( app_cli_path ) )
+                        File.Delete( app_cli_path );
+
+                    return results;
                 }
 
-                // delete file
-                if (File.Exists(app_loc))
-                    File.Delete(app_loc);
+                return "Failed to generate license";
 
-                return sb.ToString();
             }
-        }
+
+        #endregion
+
     }
 }

@@ -117,26 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="img_Icon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnBwYWExQzQEh7AAAC8klEQVRYR82Xz08TQRTH96Ie1JuJ
-        3gzsgomoB0n0D/CkxgsJxL/Ag8aLGg9Ku4bulhSjEkMrbY0/ookeIFoTUU9CtEoNBxIEjKEkvSkYo5Qf
-        BUrH92anKey+ZWcpRr/JJ9l03/u+6ezsm1lFVpf3RXYGas3TQc1IBDXzEzAVVM0ljnWdwXsYo+/Xd4i0
-        6qXv7dija+EoFJiFQkwKiMWcKzXmbmHjX+e129sCqnkNzPJkERkgFz3QS9jKSa/Xd0FyP2m6MT7gTAr7
-        9RVQ2xogIWcz2Axy6C3K0BL/PEskOzAOdrDM4yGWeTTEQnBNxRDkXNfFmcb4Fj/T/qK1j5WVuvqSjHEh
-        Ta4JvuDoBJJ40322XFjmxJvukTHrEBZlLeEC8bPaky0P+dRPZ39w8DrZ/ICMJVHNRb2uvVaUhwHge04F
-        2ggdiLDh5yNi4p0afjbC2hoiZK4dXTPjVnHoWjL/Xq8z2dibL6KUu0Zfj5P5DrBZYce02isRYOPpuV5R
-        wltPzvaQHnZg3bUooreTAauZeDcp7L31tX+C9HCgmt0wAL6x0AGrmP81L+y9NfdzjvQg+KjAKKaJGw5K
-        KyVh762VYon0cBL+jgNYpG+uxc8AMJbyICj8FwPY9EcgPwB8BJKL8C/NACxCidew81iMleTr81jMobzW
-        gK+hVyPqOp5gv7/NCGt55admWezUXdKzgtGsXDp0fTuMhGzF4cM32MJMQVj6F+aiB+UNNa1WzPcDl82o
-        vfEmy6YnqwI9KG8+/WXhKcVtFuxETybZ574xkq4TCTKHoNBaH6oR5S3JHkgiRztZcakoJrki/C1y5BaZ
-        Q2CIshX5OZINxNKibEUD0fdkLAF9JEPJHkrxbNB7McVGX41zei6k+G9UrA33Q2lZ//RYXhbOREALvyVM
-        Nkra92caPiddM0x4JFKblQsFwID3fauw9S88veIBEgbi5+M0D3Q7XrVqhF0Lz3C6at4B80Hcyfjs8Bni
-        14P8HrRX7K4izUOK8gdWY1lB0sv5DwAAAABJRU5ErkJggg==
-</value>
+  <data name="lbl_Contrib_Intro.Text" xml:space="preserve">
+    <value>I do this because I enjoy giving back, and I'm not looking to make a profit off my work. However, donations would help immensely for one purpose -- purchasing libraries and other commercial products which have insane licensing systems. These types of products would make life much easier and get releases pumped out on a more regular basis. Don't feel obligated, this is just "if you can". My main goal is better tools.</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAYGAAAAEAIAColAAAJgAAAICAAAABACAAKAgBAM6UAAAoAAAAYAAAAMAAAAABACAAAAAAAACQ

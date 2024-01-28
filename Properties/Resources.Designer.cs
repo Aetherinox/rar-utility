@@ -106,6 +106,36 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bch {
+            get {
+                object obj = ResourceManager.GetObject("bch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg_header {
+            get {
+                object obj = ResourceManager.GetObject("bg_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btc {
+            get {
+                object obj = ResourceManager.GetObject("btc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Generate.
         /// </summary>
         internal static string btn_generate {
@@ -164,6 +194,16 @@ namespace WinrarKG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eth {
+            get {
+                object obj = ResourceManager.GetObject("eth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exclamation {
             get {
                 object obj = ResourceManager.GetObject("exclamation", resourceCulture);
@@ -178,6 +218,33 @@ namespace WinrarKG.Properties {
             get {
                 object obj = ResourceManager.GetObject("information", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BCH.
+        /// </summary>
+        internal static string lbl_contrib_bch {
+            get {
+                return ResourceManager.GetString("lbl_contrib_bch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTC.
+        /// </summary>
+        internal static string lbl_contrib_btc {
+            get {
+                return ResourceManager.GetString("lbl_contrib_btc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ETH.
+        /// </summary>
+        internal static string lbl_contrib_eth {
+            get {
+                return ResourceManager.GetString("lbl_contrib_eth", resourceCulture);
             }
         }
         
@@ -200,6 +267,179 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This program requires it being ran as admin. Right-click on the program and select &quot;Run As Admin&quot;..
+        /// </summary>
+        internal static string msgbox_core_runas_msg {
+            get {
+                return ResourceManager.GetString("msgbox_core_runas_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requires Admin.
+        /// </summary>
+        internal static string msgbox_core_runas_title {
+            get {
+                return ResourceManager.GetString("msgbox_core_runas_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}.
+        /// </summary>
+        internal static string msgbox_debug_callfunc_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_callfunc_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Function Called.
+        /// </summary>
+        internal static string msgbox_debug_callfunc_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_callfunc_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to disable debug logging?.
+        /// </summary>
+        internal static string msgbox_debug_egg_disable_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_egg_disable_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable Debug Logging?.
+        /// </summary>
+        internal static string msgbox_debug_egg_disable_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_egg_disable_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to enable debug logging?
+        ///
+        ///All logs will be stored in the location:
+        ///     {0}.
+        /// </summary>
+        internal static string msgbox_debug_egg_enable_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_egg_enable_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable Debug Logging?.
+        /// </summary>
+        internal static string msgbox_debug_egg_enable_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_egg_enable_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Located {0} with Windows Env Var in:
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string msgbox_debug_fpath_env_c1_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_env_c1_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug: 1000C-1.
+        /// </summary>
+        internal static string msgbox_debug_fpath_env_c1_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_env_c1_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Located {0} with Windows Env Var in:
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string msgbox_debug_fpath_env_c2_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_env_c2_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug: 1000C-2.
+        /// </summary>
+        internal static string msgbox_debug_fpath_env_c2_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_env_c2_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Located {0} In:
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string msgbox_debug_fpath_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Located {0} with Powershell in:
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string msgbox_debug_fpath_ps_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_ps_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug: 1000B.
+        /// </summary>
+        internal static string msgbox_debug_fpath_ps_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_ps_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug: 1000A.
+        /// </summary>
+        internal static string msgbox_debug_fpath_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_fpath_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}.
+        /// </summary>
+        internal static string msgbox_debug_ps_output_msg {
+            get {
+                return ResourceManager.GetString("msgbox_debug_ps_output_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug: PowerShell Output.
+        /// </summary>
+        internal static string msgbox_debug_ps_output_title {
+            get {
+                return ResourceManager.GetString("msgbox_debug_ps_output_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot locate a required library file:{0}{1}{2}{3}Add the missing library file and restart the program..
         /// </summary>
         internal static string msgbox_err_libmissing_msg {
@@ -214,6 +454,67 @@ namespace WinrarKG.Properties {
         internal static string msgbox_err_libmissing_title {
             get {
                 return ResourceManager.GetString("msgbox_err_libmissing_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate {0}. Try placing the keygen file {1} in the same folder as the {0} program executable.
+        ///
+        ///The next dialog will allow you to simply save the license file {2}
+        ///
+        ///You&apos;ll need to copy/paste the saved {2} file into the WinRAR installation folder..
+        /// </summary>
+        internal static string msgbox_err_locate_msg {
+            get {
+                return ResourceManager.GetString("msgbox_err_locate_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No valid Path to {0}.
+        /// </summary>
+        internal static string msgbox_err_locate_title {
+            get {
+                return ResourceManager.GetString("msgbox_err_locate_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot locate a required library file:
+        ///   {0}
+        ///
+        ///Add the missing library file and restart the program..
+        /// </summary>
+        internal static string msgbox_err_misslib_msg {
+            get {
+                return ResourceManager.GetString("msgbox_err_misslib_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatal Error.
+        /// </summary>
+        internal static string msgbox_err_misslib_title {
+            get {
+                return ResourceManager.GetString("msgbox_err_misslib_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to License generation has been cancelled..
+        /// </summary>
+        internal static string msgbox_generate_cancel_msg {
+            get {
+                return ResourceManager.GetString("msgbox_generate_cancel_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation Cancelled.
+        /// </summary>
+        internal static string msgbox_generate_cancel_title {
+            get {
+                return ResourceManager.GetString("msgbox_generate_cancel_title", resourceCulture);
             }
         }
         
@@ -234,6 +535,29 @@ namespace WinrarKG.Properties {
         internal static string msgbox_licempty_title {
             get {
                 return ResourceManager.GetString("msgbox_licempty_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find {0}, so I can&apos;t open the folder.
+        ///
+        ///You will now be asked to manually select a location to save the generated license key file.
+        ///
+        ///The following locations were searched:
+        ///{1}.
+        /// </summary>
+        internal static string msgbox_nolocate_cannot_open_msg {
+            get {
+                return ResourceManager.GetString("msgbox_nolocate_cannot_open_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Not Found.
+        /// </summary>
+        internal static string msgbox_nolocate_cannot_open_title {
+            get {
+                return ResourceManager.GetString("msgbox_nolocate_cannot_open_title", resourceCulture);
             }
         }
         
@@ -301,7 +625,37 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully saved rarreg.key.
+        ///   Looks up a localized string similar to License key has been successfully generated in:
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string msgbox_ok_generate_finished_msg {
+            get {
+                return ResourceManager.GetString("msgbox_ok_generate_finished_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to License Key Generated.
+        /// </summary>
+        internal static string msgbox_ok_generate_finished_title {
+            get {
+                return ResourceManager.GetString("msgbox_ok_generate_finished_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you wish to generate a new license key for WinRAR?.
+        /// </summary>
+        internal static string msgbox_ok_generate_msg {
+            get {
+                return ResourceManager.GetString("msgbox_ok_generate_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully saved rarreg.key to the following location:
+        ///     {0}
         ///
         ///Restart WinRAR for license to apply..
         /// </summary>
@@ -321,12 +675,107 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update v{0} is available.
+        ///
+        ///Updates ensure this patch works with the latest version {1}. If you have issues using this tool, download the latest version in the top menu: Help ► Updates
+        ///
+        ///Would you like to view the update? If not, program will start as normal..
+        /// </summary>
+        internal static string msgbox_update_msg {
+            get {
+                return ResourceManager.GetString("msgbox_update_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Available: {0} ► {1}.
+        /// </summary>
+        internal static string msgbox_update_title {
+            get {
+                return ResourceManager.GetString("msgbox_update_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notify_01 {
+            get {
+                object obj = ResourceManager.GetObject("notify_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap question {
             get {
                 object obj = ResourceManager.GetObject("question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to License generated..
+        /// </summary>
+        internal static string status_action_generated {
+            get {
+                return ResourceManager.GetString("status_action_generated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to copy generated key to clipboard.
+        /// </summary>
+        internal static string status_btn_copy_mo {
+            get {
+                return ResourceManager.GetString("status_btn_copy_mo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opens the folder where {0} is installed.
+        /// </summary>
+        internal static string status_btn_openfolder {
+            get {
+                return ResourceManager.GetString("status_btn_openfolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save generated key to file rarreg.key.
+        /// </summary>
+        internal static string status_btn_save_mo {
+            get {
+                return ResourceManager.GetString("status_btn_save_mo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key generation cancelled by user.
+        /// </summary>
+        internal static string status_diag_cancelled {
+            get {
+                return ResourceManager.GetString("status_diag_cancelled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press Generate to create license key ....
+        /// </summary>
+        internal static string status_genlicense {
+            get {
+                return ResourceManager.GetString("status_genlicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical error -- restart keygen.
+        /// </summary>
+        internal static string status_misslib_critical_fail {
+            get {
+                return ResourceManager.GetString("status_misslib_critical_fail", resourceCulture);
             }
         }
         
@@ -444,6 +893,15 @@ namespace WinrarKG.Properties {
         internal static string template_btn_yes {
             get {
                 return ResourceManager.GetString("template_btn_yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I do this because I enjoy giving back, and I&apos;m not looking to make a profit off my work. However, donations would help immensely for one purpose -- purchasing libraries and other commercial products which have insane licensing systems. These types of products would make life much easier and get releases pumped out on a more regular basis. Don&apos;t feel obligated, this is just &quot;if you can&quot;. My main goal is better tools..
+        /// </summary>
+        internal static string txt_contrib_intro {
+            get {
+                return ResourceManager.GetString("txt_contrib_intro", resourceCulture);
             }
         }
         

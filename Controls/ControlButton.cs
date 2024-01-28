@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Security.Principal;
-using System.Threading.Tasks;
+﻿/*
+    @app        : WinRAR Keygen
+    @repo       : https://github.com/Aetherinox/WinrarKeygen
+    @author     : Aetherinox
+*/
+
+#region "Using"
+
 using System.Windows.Forms;
+
+#endregion
 
 /*
 
