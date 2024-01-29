@@ -14,11 +14,34 @@ using System.Text;
 using System.Windows.Forms;
 using Res = WinrarKG.Properties.Resources;
 using Cfg = WinrarKG.Properties.Settings;
+using System.IO;
+using System.Reflection;
 
 #endregion
 
 namespace WinrarKG
 {
+
+    /*
+        Global Settings
+
+        app_bDevmode        : bool
+        Determines if debug mode is enabled
+
+        bShowedUpdates      : bool
+        This determines if the app should show the update notification. This value must be set otherwise,
+        every time the user goes from the About / Contribute WinForm back to Parent, the update notification will appear over and over.
+    */
+
+    public static class Settings
+    {
+        public static bool bShowedUpdates = false;
+        public static bool app_bDevmode = false;
+    }
+
+    /*
+        Main Program
+    */
 
     public sealed class Program
     {
@@ -51,6 +74,8 @@ namespace WinrarKG
             [STAThread]
             static void Main( string[] args )
             {
+
+                AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
                 Application.EnableVisualStyles( );
                 Application.SetCompatibleTextRenderingDefault( false );
 
@@ -111,8 +136,7 @@ namespace WinrarKG
                      ensure debug mode is turned off by default as we don't want presistence
                 */
 
-                Cfg.Default.app_bDevmode = false;
-                Cfg.Default.Save( ) ;
+                Settings.app_bDevmode = false;
 
                 /*
                      utilize arguments
@@ -123,7 +147,7 @@ namespace WinrarKG
 
                 if ( args.Length > 0 && args[ 0 ] == Cfg.Default.app_argid_debug )
                 {
-                    Cfg.Default.app_bDevmode = true;
+                    Settings.app_bDevmode = true;
                     EnableDebugConsole( );
 
                     Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Debug ]", String.Format( "User defined {0} argument", Cfg.Default.app_argid_debug ) );
@@ -196,6 +220,15 @@ namespace WinrarKG
             }
 
         #endregion
+
+        private static Assembly CurrentDomain_AssemblyResolve(object sender, 
+            ResolveEventArgs args)
+        {
+            if (new AssemblyName(args.Name).Name == "MyAssembly")
+                return Assembly.LoadFrom(
+                    Path.Combine(Application.StartupPath, "MyAssembly2.dll"));
+            throw new Exception();
+        }
 
     }
 }

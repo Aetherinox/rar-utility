@@ -337,9 +337,9 @@ namespace WinrarKG
                     #pragma warning disable CS4014
                     Task.Factory.StartNew( () =>
                     {
-                        if ( ( bUpdateAvailable && !Cfg.Default.bShowedUpdates ) )
+                        if ( ( bUpdateAvailable && !Settings.bShowedUpdates ) )
                         {
-                            Cfg.Default.bShowedUpdates = true;
+                            Settings.bShowedUpdates = true;
 
                             var result = MessageBox.Show
                             ( 
@@ -1146,7 +1146,7 @@ namespace WinrarKG
                     prompt to enable / disable debug
                 */
 
-                if ( Cfg.Default.app_bDevmode )
+                if ( Settings.app_bDevmode )
                     Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Debug ] Trigger", String.Format( "Disable debug with {0} more clicks -- {1} seconds remain", i_DebugRemains, remains ) );
                 else
                     Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Debug ] Trigger", String.Format( "Enable debug with {0} more clicks -- {1} seconds remain", i_DebugRemains, remains ) );
@@ -1158,7 +1158,7 @@ namespace WinrarKG
                 if ( i_DebugClicks >= 7 )
                 {
 
-                    if ( Cfg.Default.app_bDevmode )
+                    if ( Settings.app_bDevmode )
                     {
 
                         /*
@@ -1175,7 +1175,7 @@ namespace WinrarKG
 
                         if ( resp_input.ToString( ).ToLower( ) == "yes" )
                         {
-                            Cfg.Default.app_bDevmode = false;
+                            Settings.app_bDevmode = false;
                             Program.DisableDebugConsole( );
                         }
 
@@ -1198,7 +1198,7 @@ namespace WinrarKG
 
                         if ( resp_input.ToString( ).ToLower( ) == "yes" )
                         {
-                            Cfg.Default.app_bDevmode = true;
+                            Settings.app_bDevmode = true;
                             Program.EnableDebugConsole( );
                         }
 
