@@ -159,6 +159,34 @@
     <value>&amp;Save Keyfile</value>
     <comment>F:Parent &gt; Save Keyfile</comment>
   </data>
+  <data name="btn_template_abort" xml:space="preserve">
+    <value>&amp;Abort</value>
+    <comment>Dialog &gt; Button &gt; Abort</comment>
+  </data>
+  <data name="btn_template_cancel" xml:space="preserve">
+    <value>&amp;Cancel</value>
+    <comment>Dialog &gt; Button &gt; Cancel</comment>
+  </data>
+  <data name="btn_template_ignore" xml:space="preserve">
+    <value>&amp;Ignore</value>
+    <comment>Dialog &gt; Button &gt; Ignore</comment>
+  </data>
+  <data name="btn_template_no" xml:space="preserve">
+    <value>&amp;No</value>
+    <comment>Dialog &gt; Button &gt; No</comment>
+  </data>
+  <data name="btn_template_ok" xml:space="preserve">
+    <value>&amp;OK</value>
+    <comment>Dialog &gt; Button &gt; OK</comment>
+  </data>
+  <data name="btn_template_retry" xml:space="preserve">
+    <value>&amp;Retry</value>
+    <comment>Dialog &gt; Button &gt; Retry</comment>
+  </data>
+  <data name="btn_template_yes" xml:space="preserve">
+    <value>&amp;Yes</value>
+    <comment>Dialog &gt; Button &gt; Yes</comment>
+  </data>
   <data name="chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Materials\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -413,34 +441,6 @@ Would you like to view the update? If not, program will start as normal.</value>
   </data>
   <data name="status_misslib_critical_fail" xml:space="preserve">
     <value>Critical error -- restart keygen</value>
-  </data>
-  <data name="template_btn_abort" xml:space="preserve">
-    <value>&amp;Abort</value>
-    <comment>Dialog &gt; Button &gt; Abort</comment>
-  </data>
-  <data name="template_btn_cancel" xml:space="preserve">
-    <value>&amp;Cancel</value>
-    <comment>Dialog &gt; Button &gt; Cancel</comment>
-  </data>
-  <data name="template_btn_ignore" xml:space="preserve">
-    <value>&amp;Ignore</value>
-    <comment>Dialog &gt; Button &gt; Ignore</comment>
-  </data>
-  <data name="template_btn_no" xml:space="preserve">
-    <value>&amp;No</value>
-    <comment>Dialog &gt; Button &gt; No</comment>
-  </data>
-  <data name="template_btn_ok" xml:space="preserve">
-    <value>&amp;OK</value>
-    <comment>Dialog &gt; Button &gt; OK</comment>
-  </data>
-  <data name="template_btn_retry" xml:space="preserve">
-    <value>&amp;Retry</value>
-    <comment>Dialog &gt; Button &gt; Retry</comment>
-  </data>
-  <data name="template_btn_yes" xml:space="preserve">
-    <value>&amp;Yes</value>
-    <comment>Dialog &gt; Button &gt; Yes</comment>
   </data>
   <data name="txt_contrib_intro" xml:space="preserve">
     <value>I do this because I enjoy giving back, and I'm not looking to make a profit off my work. However, donations would help immensely for one purpose -- purchasing libraries and other commercial products which have insane licensing systems. These types of products would make life much easier and get releases pumped out on a more regular basis. Don't feel obligated, this is just "if you can". My main goal is better tools.</value>

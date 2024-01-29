@@ -1,5 +1,5 @@
 ﻿/*
-    @app        : WomRAR Keygen
+    @app        : WinRAR Keygen
     @repo       : https://github.com/Aetherinox/WinrarKeygen
     @author     : Aetherinox
 */

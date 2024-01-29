@@ -158,5 +158,14 @@ namespace WinrarKG.Properties {
                 return ((string)(this["app_license_file"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public int app_debug_clicks_activate {
+            get {
+                return ((int)(this["app_debug_clicks_activate"]));
+            }
+        }
     }
 }

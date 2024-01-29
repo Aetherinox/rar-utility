@@ -1,5 +1,5 @@
 ﻿/*
-    @app        : WomRAR Keygen
+    @app        : WinRAR Keygen
     @repo       : https://github.com/Aetherinox/WinrarKeygen
     @author     : Aetherinox
 */
@@ -271,7 +271,7 @@ namespace WinrarKG
                         see method DebugTimer_Tick for functionality
                 */
 
-                DebugTimer.Interval     = ( 10 * 700 );
+                DebugTimer.Interval     = ( 10 * ( 100 * Cfg.Default.app_debug_clicks_activate ) );
                 DebugTimer.Tick         += new EventHandler( DebugTimer_Tick );
                 DebugTimer.Start        ( );
                 SW_DebugRemains.Start   ( );
@@ -287,6 +287,8 @@ namespace WinrarKG
             {
                 i_DebugClicks = 0;
                 SW_DebugRemains.Restart( );
+
+                Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Debug ] Timer", String.Format( "Debug timer SW_DebugRemains expired after {0} seconds -- resetting", Cfg.Default.app_debug_clicks_activate ) );
             }
 
 
@@ -848,6 +850,8 @@ namespace WinrarKG
             private void btn_Generate_Click( object sender, EventArgs e )
             {
 
+                Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Interface ] Button", String.Format( "{0}", System.Reflection.MethodBase.GetCurrentMethod( ).Name ) );
+
                 /*
                     Username textfield empty
                 */
@@ -924,7 +928,7 @@ namespace WinrarKG
 
             private void btn_Copy_Click( object sender, EventArgs e )
             {
-                Debug.WriteLine( txt_LicenseKey.Value );
+                Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Interface ] Button", String.Format( "{0}", System.Reflection.MethodBase.GetCurrentMethod( ).Name ) );
 
                 if (string.IsNullOrEmpty( txt_LicenseKey.Value ) )
                     StatusBar.Update( Res.statusbar_generate_first );
@@ -945,6 +949,8 @@ namespace WinrarKG
 
             private void btn_Save_Click( object sender, EventArgs e )
             {
+
+                Log.Send( log_file, new System.Diagnostics.StackTrace( true ).GetFrame( 0 ).GetFileLineNumber( ), "[ App.Interface ] Button", String.Format( "{0}", System.Reflection.MethodBase.GetCurrentMethod( ).Name ) );
 
                 /*
                     License Key textfield empty
@@ -1128,18 +1134,21 @@ namespace WinrarKG
                 i_DebugClicks++;
 
                 /*
-                    don't go higher than 7, otherwise each click after 7 will re-activate dialog
+                    don't go higher than 7, otherwise each click after 7 will re-show confirmation dialog. Start back at 0
                 */
 
-                int i_DebugRemains = 7 - i_DebugClicks;
-                if ( i_DebugRemains > 7 )
+                int i_DebugRemains = Cfg.Default.app_debug_clicks_activate - i_DebugClicks;
+                if ( i_DebugClicks > Cfg.Default.app_debug_clicks_activate )
+                {
+                    i_DebugClicks = 0;
                     return;
+                }
 
                 /*
                     timer > remaining
                 */
 
-                int remains         = 7 - Convert.ToInt32( SW_DebugRemains.Elapsed.TotalSeconds );
+                int remains         = Cfg.Default.app_debug_clicks_activate - Convert.ToInt32( SW_DebugRemains.Elapsed.TotalSeconds );
 
 
                 /*
@@ -1155,7 +1164,7 @@ namespace WinrarKG
                     wait until 7 clicks are done in X seconds
                 */
 
-                if ( i_DebugClicks >= 7 )
+                if ( i_DebugClicks >= Cfg.Default.app_debug_clicks_activate )
                 {
 
                     if ( Settings.app_bDevmode )

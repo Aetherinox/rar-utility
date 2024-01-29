@@ -163,6 +163,69 @@ namespace WinrarKG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Abort.
+        /// </summary>
+        internal static string btn_template_abort {
+            get {
+                return ResourceManager.GetString("btn_template_abort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Cancel.
+        /// </summary>
+        internal static string btn_template_cancel {
+            get {
+                return ResourceManager.GetString("btn_template_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Ignore.
+        /// </summary>
+        internal static string btn_template_ignore {
+            get {
+                return ResourceManager.GetString("btn_template_ignore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;No.
+        /// </summary>
+        internal static string btn_template_no {
+            get {
+                return ResourceManager.GetString("btn_template_no", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;OK.
+        /// </summary>
+        internal static string btn_template_ok {
+            get {
+                return ResourceManager.GetString("btn_template_ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Retry.
+        /// </summary>
+        internal static string btn_template_retry {
+            get {
+                return ResourceManager.GetString("btn_template_retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Yes.
+        /// </summary>
+        internal static string btn_template_yes {
+            get {
+                return ResourceManager.GetString("btn_template_yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap chat {
@@ -830,69 +893,6 @@ namespace WinrarKG.Properties {
         internal static string statusbar_license_saved {
             get {
                 return ResourceManager.GetString("statusbar_license_saved", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Abort.
-        /// </summary>
-        internal static string template_btn_abort {
-            get {
-                return ResourceManager.GetString("template_btn_abort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Cancel.
-        /// </summary>
-        internal static string template_btn_cancel {
-            get {
-                return ResourceManager.GetString("template_btn_cancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Ignore.
-        /// </summary>
-        internal static string template_btn_ignore {
-            get {
-                return ResourceManager.GetString("template_btn_ignore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;No.
-        /// </summary>
-        internal static string template_btn_no {
-            get {
-                return ResourceManager.GetString("template_btn_no", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;OK.
-        /// </summary>
-        internal static string template_btn_ok {
-            get {
-                return ResourceManager.GetString("template_btn_ok", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Retry.
-        /// </summary>
-        internal static string template_btn_retry {
-            get {
-                return ResourceManager.GetString("template_btn_retry", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Yes.
-        /// </summary>
-        internal static string template_btn_yes {
-            get {
-                return ResourceManager.GetString("template_btn_yes", resourceCulture);
             }
         }
         
